@@ -29,13 +29,13 @@ require('firebase/firestore')
 
 //Prob should put this in some .env lol
 const firebaseConfig = {
-  apiKey: 'AIzaSyAwEPXeL9ZA634FI60qE6ie1-VS2nQQGlI',
-  authDomain: 'corsell-app-firebase.firebaseapp.com',
-  databaseURL: 'https://corsell-app-firebase.firebaseio.com',
-  projectId: 'corsell-app-firebase',
-  storageBucket: '',
-  messagingSenderId: '1016742205830',
-  appId: '1:1016742205830:web:35a643e26f0e1f02'
+    apiKey: "AIzaSyAIlaCmBLkyR7ULibDrOl_sDkVa1vL6fKM",
+    authDomain: "cornell-secret-santa.firebaseapp.com",
+    databaseURL: "https://cornell-secret-santa.firebaseio.com",
+    projectId: "cornell-secret-santa",
+    storageBucket: "cornell-secret-santa.appspot.com",
+    messagingSenderId: "813348939741",
+    appId: "1:813348939741:web:8d829a38a20481a96df834"
 }
 
 export default class App extends Component {
