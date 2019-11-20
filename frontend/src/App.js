@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import SignUp from './SignUp';
+import SignUp from './components/SignUp';
+import Home from './components/Home';
 
 export default class App extends Component {
   constructor(props) {
@@ -11,6 +12,6 @@ export default class App extends Component {
   }
 
   render() {
-    return <SignUp />;
+    return <Home />;
   }
 }
