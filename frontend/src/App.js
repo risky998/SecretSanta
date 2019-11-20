@@ -112,9 +112,12 @@ export default class App extends Component {
                 id="priceRange"
                 ref={priceRange => (this.inputPriceRange = priceRange)}
               >
-                <option value="México">México</option>
-                <option value="Guadalajara">Guadalajara</option>
-                <option value="Monterrey">Monterrey</option>
+                <option value="$5-$10">$5 - $10</option>
+                <option value="$11-$15">$11 - $15</option>
+                <option value="$16-$20">$16 - $20</option>
+                <option value="$16-$20">$16 - $20</option>
+                <option value="$20+">$20+</option>
+
               </select>
             </div>
 
