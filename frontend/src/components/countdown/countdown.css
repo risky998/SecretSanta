@@ -1,0 +1,47 @@
+.countdownBox {
+  /* width: 90px;
+    height: 90px; */
+  display: flex;
+  flex-direction: column;
+  margin: 5% auto 5% auto;
+  padding: 10%;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  vertical-align: middle;
+  width: 80%;
+}
+
+.countdownRow {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.countdownRow h3 {
+  text-align: center;
+  width: 25%;
+}
+
+.slot {
+  /* border-style: solid;
+    width: 25%;
+    height: 200%;
+    border-radius: 100%;
+    background-image: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)); */
+  width: 90px;
+  height: 90px;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+}
+
+.countdownbox {
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 200%;
+}
