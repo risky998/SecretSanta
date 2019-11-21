@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Home.css';
+import './Faq.css'
 import Countdown from './countdown/Countdown';
 import Navbar from './layout/Navbar';
 import SnowStorm from 'react-snowstorm';
@@ -13,12 +14,15 @@ export default class Home extends Component {
 
   render() {
     return (
+      
       <div>
-        <Navbar />
+         <Navbar />
         <img className="santa_image" src={santa_image} />
         <SnowStorm />
         <img className="secret_santa" src={secret_santa} />
         <Countdown />
+        <br></br>
+       
       </div>
     );
   }
