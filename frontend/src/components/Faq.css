@@ -51,6 +51,7 @@ section {
   opacity: 0;
   overflow: none;
   transition: width .5s, opacity .5s;
+  font: times;
 }
 .content {
   position: absolute;

@@ -19,8 +19,7 @@ export default class Home extends Component {
          <Navbar />
         <img className="santa_image" src={santa_image} />
         <SnowStorm />
-        {/* <img className="secret_santa" src={secret_santa} /> */}
-        {/* <Countdown /> */}
+        
         <br></br>
         <section className="sec-faq">
       <div className="content">
