@@ -58,13 +58,19 @@ export default class Countdown extends Component {
               <h3> {this.state.seconds} </h3>
             </div>
             <div className="countdownRow1">
-              <h3> Days </h3>
-              <h3> Hours </h3>
-              <h3> Minutes </h3>
-              <h3> Seconds </h3>
+              <div className="col1">
+                <h3> Days </h3>
+                <h3> Hours </h3>
+              </div>
+              <div className="col2">
+                <h3> Minutes </h3>
+                <h3> Seconds </h3>
+              </div>
             </div>
           </div>
+          <h3 className="matchtext">Till Matches Are Released</h3>
         </div>
+
         <div className="textrow">
           <div className="textcol">
             <h2 className="biggertext"> CORNELL</h2>
