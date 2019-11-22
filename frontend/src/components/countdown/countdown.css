@@ -47,7 +47,7 @@
   font-size: 35px;
   font-weight: bold;
   color: #314667;
-  margin-right: 44%;
+  margin-right: 45%;
 }
 
 .col2 h3 {
@@ -55,14 +55,14 @@
   font-size: 35px;
   font-weight: bold;
   color: #314667;
-  margin-right: 33%;
+  margin-right: 27%;
 }
 
 .col1 {
   display: flex;
   flex-direction: row;
   width: 50%;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 
 .col2 {
@@ -82,11 +82,12 @@
 
 .matchtext {
   position: absolute;
+  width: 100%;
   text-align: center;
-  top: 90%;
+  top: 92%;
   color: #314667;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 .textrow {
@@ -124,4 +125,11 @@
 
 .background {
   margin-top: 3%;
+}
+
+.arrow {
+  position: absolute;
+  top: 100%;
+  margin-top: 1.5%;
+  justify-content: center;
 }
