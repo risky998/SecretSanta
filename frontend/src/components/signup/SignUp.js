@@ -4,6 +4,7 @@ import { RadioButtonsGroup } from '../layout/Radio';
 import { SignupButton } from '../layout/SignupButton';
 import { pickBy, keys, mapKeys } from 'lodash';
 import './signup.css';
+import {signupValidation} from '../../functions/signupValidation';
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -14,14 +15,14 @@ export default class SignUp extends Component {
         lastName: '',
         email: '',
         confirmEmail: '',
-        message: '',
+        // message: '',
         priceRange: 'five'
       },
       firstNameError: false,
       lastNameError: false,
       emailError: false,
       confirmEmailError: false,
-      messageError: false,
+      // messageError: false,
       categories: {
         Art: true,
         Books: false,
@@ -77,10 +78,12 @@ export default class SignUp extends Component {
       )
     );
     form['categories'] = categories;
-    if (this.state.categories.Other) {
-      form['otherInput'] = this.state.otherInput;
+    if (form.categories[form.categories.length - 1] == "Other"){
+      form.categories.pop()
+      form.categories.push(this.state.otherInput)
     }
     console.log(form);
+    signupValidation(form);
   }
 
   handleChange(event, key) {
@@ -105,7 +108,7 @@ export default class SignUp extends Component {
       lastNameError,
       emailError,
       confirmEmailError,
-      messageError
+      // messageError
     } = this.state;
     return (
       <div className="form-container">
@@ -182,7 +185,7 @@ export default class SignUp extends Component {
               onOtherInputChange={this.onOtherInputChange}
             />
           </div>
-          <div
+          {/* <div
             className="input-container validate-input"
             data-validate="Message is required"
           >
@@ -198,7 +201,7 @@ export default class SignUp extends Component {
                 Please enter a message to your recipient
               </h6>
             ) : null}
-          </div>
+          </div> */}
         </form>
 
         <SignupButton handleSubmit={this.handleSubmit} />
