@@ -1,17 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=BenchNine&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 
 .countdownBox {
   /* width: 90px;
     height: 90px; */
   display: flex;
   flex-direction: column;
-  margin: 24% auto 5% auto;
-  /* padding: 10%; */
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
   vertical-align: middle;
   width: 100%;
   position: absolute;
   top: 0%;
+  margin: 28.5% auto 5% auto;
 }
 
 .countdownRow {
@@ -19,8 +18,8 @@
   flex-direction: row;
   text-align: center;
   vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 20%;
+  margin-right: 20%;
 }
 
 .countdownRow1 {
@@ -28,23 +27,23 @@
   flex-direction: row;
   text-align: center;
   vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 24%;
+  margin-right: 17.5%;
 }
 
 .countdownRow h3 {
   text-align: center;
   width: 30%;
-  font-size: 100px;
+  font-size: 150px;
   color: white;
+  line-height: 85%;
 }
 
 .countdownRow1 h3 {
   text-align: center;
-
+  margin-right: 15.5%;
   font-size: 30px;
-  color: white;
-  margin-right: 10%;
+  color: #314667;
 }
 
 .countdownbox {
@@ -93,4 +92,8 @@
   margin-bottom: auto;
   margin-right: 15%;
   margin-left: 10%;
+}
+
+.background {
+  margin-top: 3%;
 }

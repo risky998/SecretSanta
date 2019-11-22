@@ -34,6 +34,11 @@ export default class Countdown extends Component {
     minutes %= 60;
     hours %= 24;
 
+    days = days < 10 ? "0" + days : days;
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
     this.setState({ days, hours, minutes, seconds });
   }
 
@@ -53,10 +58,10 @@ export default class Countdown extends Component {
               <h3> {this.state.seconds} </h3>
             </div>
             <div className="countdownRow1">
-              {/* <h3> Days </h3>
-            <h3> Hours </h3>
-            <h3> Minutes </h3>
-            <h3> Seconds </h3> */}
+              <h3> Days </h3>
+              <h3> Hours </h3>
+              <h3> Minutes </h3>
+              <h3> Seconds </h3>
             </div>
           </div>
         </div>
