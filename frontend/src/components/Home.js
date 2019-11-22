@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './Home.css';
 import Countdown from './countdown/Countdown';
 import SnowStorm from 'react-snowstorm';
+import './Faq.css'
+
 
 export default class Home extends Component {
   constructor(props) {
@@ -16,6 +18,8 @@ export default class Home extends Component {
         </div>
         <SnowStorm />
         <div> 
+        <section className="sec-faq">
+        <div className="content">
         <h2><a className="#sec-faq-a">How</a> does this work?</h2>
           <br></br>
           <ul>
@@ -33,6 +37,8 @@ export default class Home extends Component {
             <li> Show up to our Gift Day on Dec. 10 at Ho Plaza (link to FB event) with your gift and find your gift receiver and Secret Santa! </li>
 
           </ul>
+          </div>
+          </section>
       </div>
       </div>
       
