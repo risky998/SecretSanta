@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./countdown.css";
-import background from "./background.png";
+import background from "../../media/background.png";
+import arrow from "../../media/arrow.png";
 
 export default class Countdown extends Component {
   constructor(props) {
@@ -34,6 +35,11 @@ export default class Countdown extends Component {
     minutes %= 60;
     hours %= 24;
 
+    days = days < 10 ? "0" + days : days;
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
+
     this.setState({ days, hours, minutes, seconds });
   }
 
@@ -53,13 +59,20 @@ export default class Countdown extends Component {
               <h3> {this.state.seconds} </h3>
             </div>
             <div className="countdownRow1">
-              {/* <h3> Days </h3>
-            <h3> Hours </h3>
-            <h3> Minutes </h3>
-            <h3> Seconds </h3> */}
+              <div className="col1">
+                <h3> DAYS </h3>
+                <h3> HOURS </h3>
+              </div>
+              <div className="col2">
+                <h3> MINUTES </h3>
+                <h3> SECONDS </h3>
+              </div>
             </div>
           </div>
+          <h3 className="matchtext">Till matches are released...</h3>
+          <img className="arrow" src={arrow} />
         </div>
+
         <div className="textrow">
           <div className="textcol">
             <h2 className="biggertext"> CORNELL</h2>

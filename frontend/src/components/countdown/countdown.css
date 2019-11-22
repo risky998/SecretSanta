@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
+@import url("https://fonts.googleapis.com/css?family=BenchNine&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 
 .countdownBox {
   /* width: 90px;
     height: 90px; */
   display: flex;
   flex-direction: column;
-  margin: 24% auto 5% auto;
-  /* padding: 10%; */
-  /* border: 1px solid rgba(0, 0, 0, 0.8); */
   vertical-align: middle;
   width: 100%;
   position: absolute;
   top: 0%;
+  margin: 25.5% auto 5% auto;
+  font-family: "Roboto Condensed", sans-serif;
 }
 
 .countdownRow {
@@ -21,6 +21,7 @@
   vertical-align: middle;
   margin-left: auto;
   margin-right: auto;
+  width: 60%;
 }
 
 .countdownRow1 {
@@ -30,28 +31,45 @@
   vertical-align: middle;
   margin-left: auto;
   margin-right: auto;
+  width: 60%;
 }
 
 .countdownRow h3 {
   text-align: center;
   width: 30%;
-  font-size: 100px;
-  /* color: white; */
+  font-size: 150px;
+  color: white;
+  line-height: 85%;
 }
 
-.countdownRow1 h3 {
+.col1 h3 {
   text-align: center;
-
-  font-size: 30px;
-  /* color: white; */
-  margin-right: 10%;
+  font-size: 35px;
+  font-weight: bold;
+  color: #314667;
+  margin-right: 45%;
 }
 
-.countdownbox {
-  width: 30%;
-  margin-left: auto;
-  margin-right: auto;
+.col2 h3 {
   text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+  color: #314667;
+  margin-right: 27%;
+}
+
+.col1 {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-left: 3%;
+}
+
+.col2 {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  margin-left: 10%;
 }
 
 .title {
@@ -60,6 +78,16 @@
 
 .container {
   position: relative;
+}
+
+.matchtext {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 92%;
+  color: #314667;
+  font-weight: bold;
+  font-size: 40px;
 }
 
 .textrow {
@@ -74,23 +102,34 @@
 }
 
 .biggertext {
-  font-family: 'BenchNine';
+  font-family: "BenchNine";
   color: #b31b1b;
   font-size: 200px;
   text-align: center;
 }
 
 .smallertext {
-  font-family: 'BenchNine';
+  font-family: "BenchNine";
   color: #b31b1b;
   font-size: 130px;
   text-align: center;
 }
 
 .paragraph {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 15%;
   margin-left: 10%;
+}
+
+.background {
+  margin-top: 3%;
+}
+
+.arrow {
+  position: absolute;
+  top: 100%;
+  margin-top: 1.5%;
+  justify-content: center;
 }

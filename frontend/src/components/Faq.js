@@ -5,7 +5,7 @@ import Navbar from './layout/Navbar';
 import SnowStorm from 'react-snowstorm';
 import santa_image from '../media/santa_image.png';
 
-export default class Home extends Component {
+export default class FAQ extends Component {
   constructor(props) {
     super(props);
   }
@@ -14,7 +14,6 @@ export default class Home extends Component {
     return (
       
       <div>
-         <Navbar />
         <img className="santa_image" src={santa_image} />
         <SnowStorm />
         
