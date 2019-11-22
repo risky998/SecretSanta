@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './Home.css';
 import './Faq.css'
-import Countdown from './countdown/Countdown';
 import Navbar from './layout/Navbar';
 import SnowStorm from 'react-snowstorm';
 import santa_image from '../media/santa_image.png';
-import secret_santa from '../media/secret_santa.png';
 
-export default class Home extends Component {
+export default class FAQ extends Component {
   constructor(props) {
     super(props);
   }
@@ -74,6 +72,30 @@ export default class Home extends Component {
             <li> Show up to our Gift Day on Dec. 10 at Ho Plaza (link to FB event) with your gift and find your gift receiver and Secret Santa! </li>
 
           </ul>
+          <br></br>
+          <h2><a className="#sec-faq-a">How</a> does the matching process work?</h2>
+          <br></br>
+          
+          <ul>
+            <li> You enter your interests and price range</li>
+            <br></br>
+            <li>Our algorithm matches you with your perfect Secret Santa!</li>
+            <br></br>
+            </ul>
+          
+
+
+            <br></br>
+          <h2><a className="#sec-faq-a">What</a> happens if I don't get a gift?</h2>
+          <br></br>
+          
+          <ul>
+            <li> No one leaves without a gift!</li>
+            <br></br>
+            <li>If for some reason, you are giftless on the day of the event, the Cornell Secret Santa team will have a gift for you :)</li>
+            <br></br>
+            </ul>
+
       </div>
     </section>
        
