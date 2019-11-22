@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+// import { CheckboxesGroup } from '../layout/Checkbox';
+import { RadioButtonsGroup } from '../layout/Radio';
+import { SignupButton } from '../layout/SignupButton';
+import './signup.css';
 
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
@@ -19,11 +23,24 @@ const firebaseConfig = {
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      priceRange: 'five'
+    };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.onPriceRangeChange = this.onPriceRangeChange.bind(this);
   }
 
   componentDidMount() {
     firebase.initializeApp(firebaseConfig);
+  }
+
+  onPriceRangeChange(price) {
+    this.setState(
+      {
+        priceRange: price
+      },
+      () => console.log(this.state.priceRange)
+    );
   }
 
   handleSubmit(event) {
@@ -33,7 +50,7 @@ export default class SignUp extends Component {
       lastName: this.inputLastName.value,
       email: this.inputEmail.value,
       message: this.inputMessage.value,
-      priceRange: this.inputPriceRange.value
+      priceRange: this.state.priceRange
     };
     console.log(params);
     if (
@@ -65,64 +82,91 @@ export default class SignUp extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
+      <div className="form-container">
+        <form className="signup-form">
+          <span className="signup-form-title">Cornell Secret Santa Form</span>
 
-          <form onSubmit={this.handleSubmit} ref="form">
-            <div>
-              <label>First Name</label>
-              <input
-                type="text"
-                id="first_name"
-                placeholder="First Name"
-                ref={first_name => (this.inputFirstName = first_name)}
-              />
-            </div>
-            <div>
-              <label>Last Name</label>
-              <input
-                type="text"
-                id="last_name"
-                placeholder="Last Name"
-                ref={last_name => (this.inputLastName = last_name)}
-              />
-            </div>
-            <div>
-              <label>Email</label>
-              <input
-                type="text"
-                id="email"
-                placeholder="Email"
-                ref={email => (this.inputEmail = email)}
-              />
-            </div>
+          <div
+            className="input-container validate-input wrap-input"
+            data-validate="Name is required"
+          >
+            <span className="input-label">First Name</span>
+            <input
+              className="input-box"
+              type="text"
+              placeholder="Enter your name"
+              id="first_name"
+              ref={first_name => (this.inputFirstName = first_name)}
+            />
+            <span className="input-foucs"></span>
+          </div>
 
-            <div>
-              <label>Price Range</label>
-              <select
-                id="priceRange"
-                ref={priceRange => (this.inputPriceRange = priceRange)}
-              >
-                <option value="México">México</option>
-                <option value="Guadalajara">Guadalajara</option>
-                <option value="Monterrey">Monterrey</option>
-              </select>
-            </div>
+          <div
+            className="input-container validate-input wrap-input"
+            data-validate="Name is required"
+          >
+            <span className="input-label">Last Name</span>
+            <input
+              className="input-box"
+              type="text"
+              placeholder="Enter your name"
+              id="last_name"
+              ref={last_name => (this.inputLastName = last_name)}
+            />
+            <span className="input-foucs"></span>
+          </div>
 
-            <div>
-              <label>Message</label>
-              <textarea
-                id="message"
-                rows="3"
-                ref={message => (this.inputMessage = message)}
-              ></textarea>
-            </div>
-            <input type="submit" value="Submit" />
-          </form>
-        </header>
+          <div
+            className="input-container validate-input wrap-input"
+            data-validate="Valid email is required: ex@abc.xyz"
+          >
+            <span className="input-label">Email</span>
+            <input
+              className="input-box"
+              type="text"
+              placeholder="@cornell.edu"
+              id="email"
+              ref={email => (this.inputEmail = email)}
+            />
+            <span className="input-focus"></span>
+          </div>
+
+          <div
+            className="input-container validate-input wrap-input"
+            data-validate="Valid email is required: ex@abc.xyz"
+          >
+            <span className="input-label">Confirm Email</span>
+            <input
+              className="input-box"
+              type="text"
+              placeholder=""
+              id="confirm_email"
+              ref={confirm_email => (this.inputConfirmEmail = confirm_email)}
+            />
+            <span className="input-focus"></span>
+          </div>
+
+          <div className="custom-container ">
+            {/* <CheckboxesGroup onPriceRangeChange={this.onPriceRangeChange} /> */}
+            <RadioButtonsGroup onPriceRangeChange={this.onPriceRangeChange} />
+          </div>
+
+          <div
+            className="input-container validate-input"
+            data-validate="Message is required"
+          >
+            <span className="input-label">Message</span>
+            <textarea
+              className="input-box"
+              placeholder="Your message here..."
+              id="message"
+              ref={message => (this.inputMessage = message)}
+            ></textarea>
+            <span className="input-foucs"></span>
+          </div>
+        </form>
+
+        <SignupButton handleSubmit={this.handleSubmit} />
       </div>
     );
   }
