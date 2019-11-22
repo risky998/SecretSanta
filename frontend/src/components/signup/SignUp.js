@@ -1,37 +1,70 @@
-import React, { Component } from 'react';
-// import { CheckboxesGroup } from '../layout/Checkbox';
+import React, { Component, useState } from 'react';
+import { CheckboxesGroup } from '../layout/Checkbox';
 import { RadioButtonsGroup } from '../layout/Radio';
 import { SignupButton } from '../layout/SignupButton';
 import './signup.css';
-
-// Firebase App (the core Firebase SDK) is always required and
-// must be listed before other Firebase SDKs
-let firebase = require('firebase/app');
-// Add the Firebase products that you want to use
-require('firebase/firestore');
-
-const firebaseConfig = {
-  apiKey: 'AIzaSyAIlaCmBLkyR7ULibDrOl_sDkVa1vL6fKM',
-  authDomain: 'cornell-secret-santa.firebaseapp.com',
-  databaseURL: 'https://cornell-secret-santa.firebaseio.com',
-  projectId: 'cornell-secret-santa',
-  storageBucket: 'cornell-secret-santa.appspot.com',
-  messagingSenderId: '813348939741',
-  appId: '1:813348939741:web:8d829a38a20481a96df834'
-};
 
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      priceRange: 'five'
+      values: {
+        firstName: '',
+        lastName: '',
+        email: '',
+        confirmEmail: '',
+        message: '',
+        priceRange: 'five'
+      },
+      firstNameError: false,
+      lastNameError: false,
+      emailError: false,
+      confirmEmailError: false,
+      messageError: false,
+      categories: {
+        Art: true,
+        Books: false,
+        Fashion: false,
+        Food: false,
+        Games: false,
+        Movies: false,
+        Sports: false,
+        Stationery: false,
+        Other: false
+      }
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleChange = this.handleChange.bind(this);
     this.onPriceRangeChange = this.onPriceRangeChange.bind(this);
+    this.onCheckboxChange = this.onCheckboxChange.bind(this);
   }
 
-  componentDidMount() {
-    firebase.initializeApp(firebaseConfig);
+  // componentDidMount() {
+  //   firebase.initializeApp(firebaseConfig);
+  // }
+
+  onCheckboxChange(name, event) {
+    this.setState(
+      {
+        categories: {
+          ...this.state.categories,
+          [name]: event.target.checked
+        }
+      },
+      () => console.log(this.state.categories)
+    );
+  }
+
+  handleSubmit() {}
+
+  handleChange(event, key) {
+    const value = event.target.value;
+    this.setState({
+      values: {
+        ...this.state.values,
+        [key]: value
+      }
+    });
   }
 
   onPriceRangeChange(price) {
@@ -43,92 +76,60 @@ export default class SignUp extends Component {
     );
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    const params = {
-      firstName: this.inputFirstName.value,
-      lastName: this.inputLastName.value,
-      email: this.inputEmail.value,
-      message: this.inputMessage.value,
-      priceRange: this.state.priceRange
-    };
-    console.log(params);
-    if (
-      params.firstName &&
-      params.lastName &&
-      params.email &&
-      params.message &&
-      params.priceRange
-    ) {
-      let db = firebase.firestore();
-      db.collection('users')
-        .doc(params.email)
-        .set({
-          First_Name: params.firstName,
-          Last_Name: params.lastName,
-          Email: params.email,
-          Message: params.message,
-          Price_Range: params.priceRange
-        })
-        .then(() => {
-          alert('success', 'Your message was sent successfull');
-        })
-        .catch(err => {
-          console.log(err);
-          alert('danger', 'Your message could not be sent');
-        });
-    }
-  }
-
   render() {
+    const {
+      firstNameError,
+      lastNameError,
+      emailError,
+      confirmEmailError,
+      messageError
+    } = this.state;
     return (
       <div className="form-container">
         <form className="signup-form">
           <span className="signup-form-title">Cornell Secret Santa Form</span>
 
-          <div
-            className="input-container validate-input wrap-input"
-            data-validate="Name is required"
-          >
+          <div className="input-container validate-input wrap-input">
             <span className="input-label">First Name</span>
             <input
               className="input-box"
               type="text"
               placeholder="Enter your name"
               id="first_name"
-              ref={first_name => (this.inputFirstName = first_name)}
+              value={this.state.firstName}
+              onChange={e => this.handleChange(e, 'firstName')}
             />
-            <span className="input-foucs"></span>
+            {!firstNameError ? (
+              <h6 className="error-message">Enter your name!</h6>
+            ) : null}
           </div>
 
-          <div
-            className="input-container validate-input wrap-input"
-            data-validate="Name is required"
-          >
+          <div className="input-container validate-input wrap-input">
             <span className="input-label">Last Name</span>
             <input
               className="input-box"
               type="text"
               placeholder="Enter your name"
               id="last_name"
-              ref={last_name => (this.inputLastName = last_name)}
+              onChange={e => this.handleChange(e, 'lastName')}
             />
-            <span className="input-foucs"></span>
+            {!lastNameError ? (
+              <h6 className="error-message">Enter your name!</h6>
+            ) : null}
           </div>
 
-          <div
-            className="input-container validate-input wrap-input"
-            data-validate="Valid email is required: ex@abc.xyz"
-          >
+          <div className="input-container validate-input wrap-input">
             <span className="input-label">Email</span>
             <input
               className="input-box"
               type="text"
               placeholder="@cornell.edu"
               id="email"
-              ref={email => (this.inputEmail = email)}
+              onChange={e => this.handleChange(e, 'email')}
             />
-            <span className="input-focus"></span>
+            {!emailError ? (
+              <h6 className="error-message">Enter a valid Cornell email!</h6>
+            ) : null}
           </div>
 
           <div
@@ -141,16 +142,22 @@ export default class SignUp extends Component {
               type="text"
               placeholder=""
               id="confirm_email"
-              ref={confirm_email => (this.inputConfirmEmail = confirm_email)}
+              onChange={e => this.handleChange(e, 'confirmEmail')}
             />
-            <span className="input-focus"></span>
+            {!confirmEmailError ? (
+              <h6 className="error-message">Emails do not match</h6>
+            ) : null}
           </div>
 
           <div className="custom-container ">
-            {/* <CheckboxesGroup onPriceRangeChange={this.onPriceRangeChange} /> */}
             <RadioButtonsGroup onPriceRangeChange={this.onPriceRangeChange} />
           </div>
-
+          <div className="custom-container ">
+            <CheckboxesGroup
+              categories={this.state.categories}
+              onCheckboxChange={this.onCheckboxChange}
+            />
+          </div>
           <div
             className="input-container validate-input"
             data-validate="Message is required"
@@ -160,9 +167,13 @@ export default class SignUp extends Component {
               className="input-box"
               placeholder="Your message here..."
               id="message"
-              ref={message => (this.inputMessage = message)}
+              onChange={e => this.handleChange(e, 'message')}
             ></textarea>
-            <span className="input-foucs"></span>
+            {!messageError ? (
+              <h6 className="error-message">
+                Please enter a message to your recipient
+              </h6>
+            ) : null}
           </div>
         </form>
 

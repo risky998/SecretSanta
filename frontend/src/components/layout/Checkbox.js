@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import FormLabel from '@material-ui/core/FormLabel';
 import FormControl from '@material-ui/core/FormControl';
@@ -6,32 +6,16 @@ import FormGroup from '@material-ui/core/FormGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import Checkbox from '@material-ui/core/Checkbox';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex'
-  }
-}));
+import './checkbox.css';
 
 export const CheckboxesGroup = props => {
-  const classes = useStyles();
-  const [state, setState] = React.useState({
-    Art: true,
-    Books: false,
-    Fashion: false,
-    Food: false,
-    Games: false,
-    Movies: false,
-    Sports: false,
-    Stationary: false,
-    Other
-  });
+  const [otherInput, setOtherInput] = useState('');
 
-  const handleChange = name => event => {
-    setState({ ...state, [name]: event.target.checked });
-    if (event.target.checked) {
-      props.onPriceRangeChange(name);
-    }
+  const handleInputChange = event => {
+    const value = event.target.value;
+    setOtherInput({
+      otherInput: value
+    });
   };
 
   const {
@@ -42,9 +26,9 @@ export const CheckboxesGroup = props => {
     Games,
     Movies,
     Sports,
-    Stationary,
+    Stationery,
     Other
-  } = state;
+  } = props.categories;
   const error =
     [
       Art,
@@ -54,26 +38,23 @@ export const CheckboxesGroup = props => {
       Games,
       Movies,
       Sports,
-      Stationary,
+      Stationery,
       Other
-    ].filter(v => v).length !== 1;
+    ].filter(v => v).length === 0;
 
   return (
-    <div className={classes.root}>
-      <FormControl
-        required
-        error={error}
-        component="fieldset"
-        className={classes.formControl}
-      >
+    <div className="container">
+      <FormControl required error={error} component="fieldset">
         <FormLabel component="legend">Categories</FormLabel>
         <FormGroup>
           <FormControlLabel
             control={
               <Checkbox
-                checked={Art}
-                onChange={handleChange('Art')}
-                value="Art"
+                // checked={Art}
+                onChange={e => {
+                  props.onCheckboxChange('Art', e);
+                  console.log(e.target.checked);
+                }}
               />
             }
             label="Art"
@@ -81,35 +62,89 @@ export const CheckboxesGroup = props => {
           <FormControlLabel
             control={
               <Checkbox
-                checked={eleven}
-                onChange={handleChange('eleven')}
-                value="eleven"
+                checked={Books}
+                onChange={e => props.onCheckboxChange('Books', e)}
               />
             }
-            label="$11 - $15"
+            label="Books"
           />
           <FormControlLabel
             control={
               <Checkbox
-                checked={sixteen}
-                onChange={handleChange('sixteen')}
-                value="sixteen"
+                checked={Fashion}
+                onChange={e => props.onCheckboxChange('Fashion', e)}
               />
             }
-            label="$16 - $20"
+            label="Fashion"
           />
           <FormControlLabel
             control={
               <Checkbox
-                checked={twenty}
-                onChange={handleChange('twenty')}
-                value="twenty"
+                checked={Food}
+                onChange={e => props.onCheckboxChange('Food', e)}
               />
             }
-            label="$20+"
+            label="Food"
           />
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={Games}
+                onChange={e => props.onCheckboxChange('Games', e)}
+              />
+            }
+            label="Games"
+          />
+
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={Movies}
+                onChange={e => props.onCheckboxChange('Movies', e)}
+              />
+            }
+            label="Movies"
+          />
+
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={Sports}
+                onChange={e => props.onCheckboxChange('Sports', e)}
+              />
+            }
+            label="Sports"
+          />
+
+          <FormControlLabel
+            control={
+              <Checkbox
+                checked={Stationery}
+                onChange={e => props.onCheckboxChange('Stationery', e)}
+              />
+            }
+            label="Stationery"
+          />
+          <div className="container">
+            <FormControlLabel
+              control={
+                <Checkbox
+                  checked={Other}
+                  onChange={e => props.onCheckboxChange('Other', e)}
+                />
+              }
+              label="Other:"
+            />
+            <input
+              className="input-other"
+              disabled={!Other}
+              onChange={e => handleInputChange(e)}
+            />
+          </div>
         </FormGroup>
-        <FormHelperText>Pick one!</FormHelperText>
+        <FormHelperText stlye={{ marginTop: 15 }}>
+          Pick at least one!
+        </FormHelperText>
       </FormControl>
     </div>
   );
