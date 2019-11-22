@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import './countdown.css';
+import React, { Component } from "react";
+import "./countdown.css";
+import background from "./background.png";
 
 export default class Countdown extends Component {
   constructor(props) {
@@ -38,18 +39,39 @@ export default class Countdown extends Component {
 
   render() {
     return (
-      <div className="countdownBox">
-        <div className="countdownRow">
-          <h3> {this.state.days} </h3>
-          <h3> {this.state.hours} </h3>
-          <h3> {this.state.minutes} </h3>
-          <h3> {this.state.seconds} </h3>
+      <div>
+        <div className="container">
+          <img className="background" src={background} />
+          <div className="countdownBox">
+            <div className="countdownRow">
+              <h3> {this.state.days} </h3>
+              <h3> : </h3>
+              <h3> {this.state.hours} </h3>
+              <h3> : </h3>
+              <h3> {this.state.minutes} </h3>
+              <h3> : </h3>
+              <h3> {this.state.seconds} </h3>
+            </div>
+            <div className="countdownRow1">
+              {/* <h3> Days </h3>
+            <h3> Hours </h3>
+            <h3> Minutes </h3>
+            <h3> Seconds </h3> */}
+            </div>
+          </div>
         </div>
-        <div className="countdownRow">
-          <h3> Days </h3>
-          <h3> Hours </h3>
-          <h3> Minutes </h3>
-          <h3> Seconds </h3>
+        <div className="textrow">
+          <div className="textcol">
+            <h2 className="biggertext"> CORNELL</h2>
+            <h2 className="smallertext"> SECRET SANTA</h2>
+          </div>
+          <div className="textcol">
+            <h2 className="paragraph">
+              Welcome to Cornell Secret Santa! This Christmas, we want everyone
+              at Cornell to enjoy the festive season by participating in a
+              campus-wide Secret Santa gift exchange!
+            </h2>
+          </div>
         </div>
       </div>
     );
