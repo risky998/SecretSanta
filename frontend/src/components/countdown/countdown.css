@@ -1,13 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=BenchNine&display=swap");
+
 .countdownBox {
   /* width: 90px;
     height: 90px; */
   display: flex;
   flex-direction: column;
-  margin: 5% auto 5% auto;
-  padding: 10%;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  margin: 24% auto 5% auto;
+  /* padding: 10%; */
+  /* border: 1px solid rgba(0, 0, 0, 0.8); */
   vertical-align: middle;
-  width: 80%;
+  width: 100%;
+  position: absolute;
+  top: 0%;
 }
 
 .countdownRow {
@@ -15,24 +19,32 @@
   flex-direction: row;
   text-align: center;
   vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.countdownRow1 {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .countdownRow h3 {
   text-align: center;
-  width: 25%;
+  width: 30%;
+  font-size: 100px;
+  color: white;
 }
 
-.slot {
-  /* border-style: solid;
-    width: 25%;
-    height: 200%;
-    border-radius: 100%;
-    background-image: radial-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 1)); */
-  width: 90px;
-  height: 90px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  border-radius: 50%;
-  margin: 0 auto 20px auto;
+.countdownRow1 h3 {
+  text-align: center;
+
+  font-size: 30px;
+  color: white;
+  margin-right: 10%;
 }
 
 .countdownbox {
@@ -44,4 +56,41 @@
 
 .title {
   font-size: 200%;
+}
+
+.container {
+  position: relative;
+}
+
+.textrow {
+  display: flex;
+  flex-direction: row;
+}
+
+.textcol {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.biggertext {
+  font-family: "BenchNine";
+  color: #b31b1b;
+  font-size: 200px;
+  text-align: center;
+}
+
+.smallertext {
+  font-family: "BenchNine";
+  color: #b31b1b;
+  font-size: 130px;
+  text-align: center;
+}
+
+.paragraph {
+  font-family: "Roboto";
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 15%;
+  margin-left: 10%;
 }
