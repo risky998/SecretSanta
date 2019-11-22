@@ -14,7 +14,6 @@ export default class FAQ extends Component {
     return (
       
       <div>
-         <Navbar />
         <img className="santa_image" src={santa_image} />
         <SnowStorm />
         

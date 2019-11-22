@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
 import "./Home.css";
 import Countdown from "./countdown/Countdown";
 import SnowStorm from "react-snowstorm";
