@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./countdown.css";
-import background from "./background.png";
+import background from "../../media/background.png";
 
 export default class Countdown extends Component {
   constructor(props) {
