@@ -9,15 +9,6 @@ import Checkbox from '@material-ui/core/Checkbox';
 import './checkbox.css';
 
 export const CheckboxesGroup = props => {
-  const [otherInput, setOtherInput] = useState('');
-
-  const handleInputChange = event => {
-    const value = event.target.value;
-    setOtherInput({
-      otherInput: value
-    });
-  };
-
   const {
     Art,
     Books,
@@ -50,7 +41,7 @@ export const CheckboxesGroup = props => {
           <FormControlLabel
             control={
               <Checkbox
-                // checked={Art}
+                checked={Art}
                 onChange={e => {
                   props.onCheckboxChange('Art', e);
                   console.log(e.target.checked);
@@ -138,7 +129,7 @@ export const CheckboxesGroup = props => {
             <input
               className="input-other"
               disabled={!Other}
-              onChange={e => handleInputChange(e)}
+              onChange={e => props.onOtherInputChange(e)}
             />
           </div>
         </FormGroup>

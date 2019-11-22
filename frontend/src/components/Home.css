@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Amatic+SC&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,10 +6,10 @@
   padding: 0;
 }
 
-html {
+.parent-ontainer {
   /* font-family: 'Mountains of Christmas', cursive; */
   height: 70%;
-  font-family: "Amatic SC", cursive;
+  font-family: 'Amatic SC', cursive;
   background-image: linear-gradient(to bottom, #056886, rgba(0, 0, 255, 0));
   background-repeat: no-repeat;
 }
@@ -34,7 +34,7 @@ html {
   width: 100%;
 }
 
-.container {
+.countdown-container {
   position: relative;
 }
 

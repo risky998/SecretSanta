@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=BenchNine&display=swap");
+@import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
 
 .countdownBox {
   /* width: 90px;
@@ -36,14 +36,14 @@
   text-align: center;
   width: 30%;
   font-size: 100px;
-  color: white;
+  /* color: white; */
 }
 
 .countdownRow1 h3 {
   text-align: center;
 
   font-size: 30px;
-  color: white;
+  /* color: white; */
   margin-right: 10%;
 }
 
@@ -74,21 +74,21 @@
 }
 
 .biggertext {
-  font-family: "BenchNine";
+  font-family: 'BenchNine';
   color: #b31b1b;
   font-size: 200px;
   text-align: center;
 }
 
 .smallertext {
-  font-family: "BenchNine";
+  font-family: 'BenchNine';
   color: #b31b1b;
   font-size: 130px;
   text-align: center;
 }
 
 .paragraph {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 15%;

@@ -1,7 +1,8 @@
-import React, { Component, useState } from 'react';
+import React, { Component } from 'react';
 import { CheckboxesGroup } from '../layout/Checkbox';
 import { RadioButtonsGroup } from '../layout/Radio';
 import { SignupButton } from '../layout/SignupButton';
+import { pickBy, keys, mapKeys } from 'lodash';
 import './signup.css';
 
 export default class SignUp extends Component {
@@ -31,12 +32,14 @@ export default class SignUp extends Component {
         Sports: false,
         Stationery: false,
         Other: false
-      }
+      },
+      otherInput: ''
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.onPriceRangeChange = this.onPriceRangeChange.bind(this);
     this.onCheckboxChange = this.onCheckboxChange.bind(this);
+    this.onOtherInputChange = this.onOtherInputChange.bind(this);
   }
 
   // componentDidMount() {
@@ -55,7 +58,30 @@ export default class SignUp extends Component {
     );
   }
 
-  handleSubmit() {}
+  onOtherInputChange(event) {
+    const value = event.target.value;
+    this.setState({
+      otherInput: value
+    });
+  }
+
+  handleSubmit() {
+    let form = this.state.values;
+    const categories = keys(
+      pickBy(
+        mapKeys(this.state.categories, function(value, key) {
+          if (value) {
+            return key;
+          }
+        })
+      )
+    );
+    form['categories'] = categories;
+    if (this.state.categories.Other) {
+      form['otherInput'] = this.state.otherInput;
+    }
+    console.log(form);
+  }
 
   handleChange(event, key) {
     const value = event.target.value;
@@ -68,12 +94,9 @@ export default class SignUp extends Component {
   }
 
   onPriceRangeChange(price) {
-    this.setState(
-      {
-        priceRange: price
-      },
-      () => console.log(this.state.priceRange)
-    );
+    this.setState({
+      priceRange: price
+    });
   }
 
   render() {
@@ -156,6 +179,7 @@ export default class SignUp extends Component {
             <CheckboxesGroup
               categories={this.state.categories}
               onCheckboxChange={this.onCheckboxChange}
+              onOtherInputChange={this.onOtherInputChange}
             />
           </div>
           <div

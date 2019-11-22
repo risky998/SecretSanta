@@ -16,6 +16,15 @@ const firebaseConfig = {
   appId: '1:813348939741:web:8d829a38a20481a96df834'
 };
 
+/* Check:
+1. firstName, lastName, message: exists
+2. email: Valid Cornell email
+3. confirmEmail: matches email
+4. categories: at least one filled
+
+Then, send error feedback to Signup for error message to be displayed.
+If no errors, send to firebase
+*/
 export function signupValidation() {
 
     handleSubmit(event) {
