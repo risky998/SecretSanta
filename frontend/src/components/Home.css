@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Amatic+SC&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Amatic+SC&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,9 +9,10 @@
 .parent-container {
   /* font-family: 'Mountains of Christmas', cursive; */
   height: 70%;
-  font-family: 'Amatic SC', cursive;
+  font-family: "Amatic SC", cursive;
   background-image: linear-gradient(to bottom, #cdf3ff, rgba(0, 0, 0, 0.5));
   background-repeat: no-repeat;
+  scroll-behavior: smooth;
 }
 
 .santa_image {

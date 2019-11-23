@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
-import {Route, Link} from 'react-router-dom'
-import './navbar.css';
+import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
+import "./navbar.css";
+import logo from "../../media/logo.png";
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -9,22 +10,23 @@ export default class Navbar extends Component {
 
   render() {
     return (
-      <div>
+      <div className="header">
+        <img className="logo" src={logo} />
         <nav id="navbar">
           <ul>
             <li>
-              <Link to={'/'}>
-              <a>Home</a>
+              <Link to={"/"}>
+                <a>Home</a>
               </Link>
             </li>
             <li className="">
-            <Link to={'/faq'}>
-              <a>FAQ</a>
+              <Link to={"/faq"}>
+                <a>FAQ</a>
               </Link>
             </li>
-            <li className="">            
-            <Link to={'/signup'}>
-              <a>Sign Up</a>
+            <li className="">
+              <Link to={"/signup"}>
+                <a>Sign Up</a>
               </Link>
             </li>
           </ul>
