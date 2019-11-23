@@ -2,29 +2,21 @@ import React, { Component } from 'react';
 import './Home.css';
 import './Faq.css';
 import SnowStorm from 'react-snowstorm';
-import santa_image from '../media/santa_image.png';
+import background from '../media/background-crop.png';
 
 export default class FAQ extends Component {
   render() {
     return (
-      <div className="faq-container">
-        <img className="santa_image" src={santa_image} />
+      <div >
+        <img className="background" src={background} />
         <SnowStorm />
-
         <br></br>
         <section className="sec-faq">
           <div className="content">
-            {/* <h1> HO HO HO! </h1> */}
-            <br></br>
             <h1>
               <b>Welcome</b> to the 2019 Secret Santa Gift Exchange FAQ Section!
             </h1>
             <br></br>
-            {/* <h2><a className="#sec-faq-a">What</a> is this event?</h2>
-        <br></br>
-        <h5>This Christmas, we want everyone at
-          Cornell to enjoy the festive season by participating in a campus-wide
-          Secret Santa gift exchange!</h5> */}
             <br></br>
             <h2>
               <b>How</b> does this work?
@@ -63,7 +55,7 @@ export default class FAQ extends Component {
             <br></br>
 
             <h2>
-              <a className="#sec-faq-a">What</a> gifts could I buy?
+            <b>What</b> gifts could I buy?
             </h2>
             <br></br>
             <h5>
@@ -98,7 +90,7 @@ export default class FAQ extends Component {
             </ul>
             <br></br>
             <h2>
-              <a className="#sec-faq-a">How</a> does the matching process work?
+            <b>How</b> does the matching process work?
             </h2>
             <br></br>
 
@@ -111,7 +103,7 @@ export default class FAQ extends Component {
 
             <br></br>
             <h2>
-              <a className="#sec-faq-a">What</a> happens if I don't get a gift?
+            <b>What</b> happens if I don't get a gift?
             </h2>
             <br></br>
 
