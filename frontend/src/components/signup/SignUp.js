@@ -55,7 +55,7 @@ export default class SignUp extends Component {
           [name]: event.target.checked
         }
       },
-      () => console.log(this.state.categories)
+      // () => console.log(this.state.categories)
     );
   }
 
@@ -82,7 +82,7 @@ export default class SignUp extends Component {
       form.categories.pop();
       form.categories.push(this.state.otherInput);
     }
-    console.log(form);
+    // console.log(form);
     signupValidation(form);
   }
 
@@ -97,8 +97,12 @@ export default class SignUp extends Component {
   }
 
   onPriceRangeChange(price) {
+    // console.log(price)
     this.setState({
-      priceRange: price
+      values: {
+        ...this.state.values,
+        priceRange: price
+      }
     });
   }
 

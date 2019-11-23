@@ -9,13 +9,26 @@
 .parent-container {
   /* font-family: 'Mountains of Christmas', cursive; */
   height: 70%;
+<<<<<<< HEAD
   font-family: "Amatic SC", cursive;
   background-image: linear-gradient(to bottom, #cdf3ff, rgba(0, 0, 0, 0.5));
+=======
+  font-family: 'Amatic SC', cursive;
+  background-image: linear-gradient(to bottom, #cdf3ff, rgba(255, 255, 255));
+>>>>>>> f9403e09a532886d3322b3c193502c541fd82e8e
   background-repeat: no-repeat;
   scroll-behavior: smooth;
 }
 
 .santa_image {
+  width: 50%;
+  display: block;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.santa-logo{
   width: 50%;
   display: block;
   margin-top: 10%;

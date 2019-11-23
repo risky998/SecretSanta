@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import "./countdown.css";
 import background from "../../media/background.png";
+<<<<<<< HEAD
 import arrow from "../../media/arrow.png";
+=======
+// import arrow from "../../media/arrow.png";
+import logo from "../../media/logo.png";
+import gift from "../../media/gifts.png";
+>>>>>>> f9403e09a532886d3322b3c193502c541fd82e8e
 
 export default class Countdown extends Component {
   constructor(props) {
@@ -69,21 +75,73 @@ export default class Countdown extends Component {
               </div>
             </div>
           </div>
+          <br></br>
+          <br></br>
           <h3 className="matchtext">Till matches are released...</h3>
           <img className="arrow" src={arrow} />
         </div>
+        <br></br>
+        <br></br>
 
         <div className="textrow">
-          <div className="textcol">
-            <h2 className="biggertext"> CORNELL</h2>
-            <h2 className="smallertext"> SECRET SANTA</h2>
+          <div className="imgcol">
+            {/* <h2 className="biggertext"> CORNELL</h2>
+            <h2 className="smallertext"> SECRET SANTA</h2> */}
+            <img className = "logo" src = {logo}></img>
           </div>
           <div className="textcol">
-            <h2 className="paragraph">
+            <p className="normaltext" >
+              <br></br>
               Welcome to Cornell Secret Santa! This Christmas, we want everyone
               at Cornell to enjoy the festive season by participating in a
               campus-wide Secret Santa gift exchange!
-            </h2>
+            </p>
+          </div>
+        </div>
+        <br></br>
+        <br></br>
+        <div className="textrow">
+          <div className="textcol2">
+          {/* <h4 className = "paragraph">
+              <b>How</b> does this work?
+            </h4 >
+            <br></br> */}
+            <ol className = "list">
+              <br></br>
+              <br></br>
+              <li>
+                Sign up on Nov. 22 to participate in the Secret Santa draw.
+              </li>
+              <br></br>
+              <li>
+                Make sure to add your interests and price range so we can match
+                you with your perfect Santa!
+              </li>
+              <br></br>
+
+              <li>
+                {' '}
+                Tell your friends about Cornell Secret Santa and wait till our
+                Secret Santa reveal on Dec. 6!
+              </li>
+              <br></br>
+
+              <li> Purchase your gift for your gift receiver! </li>
+              <br></br>
+
+              <li>
+                {' '}
+                Show up to our Gift Day on Dec. 10 at Ho Plaza (link to FB
+                event) with your gift and find your gift receiver and Secret
+                Santa!{' '}
+              </li>
+            </ol>
+           
+          </div>
+          <div className="textcol">
+            <h4 className="paragraph">
+            <img className = "gift" src = {gift}></img>
+            </h4>
           </div>
         </div>
       </div>
