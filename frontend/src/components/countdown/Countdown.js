@@ -49,6 +49,7 @@ export default class Countdown extends Component {
   render() {
     return (
       <div>
+        
         <div className="container">
           <img className="background" src={background} />
           <div className="countdownBox">
@@ -71,9 +72,9 @@ export default class Countdown extends Component {
                 <h3> SECONDS </h3>
               </div>
             </div>
+            <br></br>
           </div>
-          <br></br>
-          <br></br>
+          
           <h3 className="matchtext">Till matches are released...</h3>
           <img className="arrow" src={arrow} />
         </div>
