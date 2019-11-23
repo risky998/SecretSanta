@@ -88,11 +88,12 @@
   color: #314667;
   font-weight: bold;
   font-size: 40px;
+  font-family: "Roboto-condensed";
 }
 
 .textrow {
   display: flex;
-  flex-direction: row;
+  flex-direction: all;
 }
 
 .imgcol {
@@ -103,6 +104,14 @@
 }
 
 .textcol {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.textcol2 {
   display: flex;
   flex-direction: column;
   width: 80%;
@@ -123,12 +132,29 @@
   text-align: center;
 }
 
+.normaltext {
+  font-family: "Roboto-condensed";
+  text-align: left;
+  line-height: 40px;
+  text-justify: inter-word;
+}
+
 .paragraph {
-  font-family: "Roboto";
+  font-family: "Roboto-condensed";
   margin-top: auto;
   margin-bottom: auto;
   margin-right: 15%;
   margin-left: 10%;
+  line-height: 30px;
+  text-justify: inter-word;
+
+}
+
+.list {
+  list-style-position: inside;
+  font-family: "Roboto-condensed";
+  font-size: 20px;
+
 }
 
 .background {
