@@ -95,10 +95,18 @@
   flex-direction: row;
 }
 
+.imgcol {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  padding-left: 10%;
+}
+
 .textcol {
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 80%;
+  padding-left: 10%;
 }
 
 .biggertext {

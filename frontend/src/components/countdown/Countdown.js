@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./countdown.css";
 import background from "../../media/background.png";
 // import arrow from "../../media/arrow.png";
+import logo from "../../media/logo.png";
 
 export default class Countdown extends Component {
   constructor(props) {
@@ -72,18 +73,21 @@ export default class Countdown extends Component {
           <h3 className="matchtext">Till matches are released...</h3>
           {/* <img className="arrow" src={arrow} /> */}
         </div>
+        <br></br>
+        <br></br>
 
         <div className="textrow">
-          <div className="textcol">
-            <h2 className="biggertext"> CORNELL</h2>
-            <h2 className="smallertext"> SECRET SANTA</h2>
+          <div className="imgcol">
+            {/* <h2 className="biggertext"> CORNELL</h2>
+            <h2 className="smallertext"> SECRET SANTA</h2> */}
+            <img className = "logo" src = {logo}></img>
           </div>
           <div className="textcol">
-            <h2 className="paragraph">
+            <h4 className="paragraph">
               Welcome to Cornell Secret Santa! This Christmas, we want everyone
               at Cornell to enjoy the festive season by participating in a
               campus-wide Secret Santa gift exchange!
-            </h2>
+            </h4>
           </div>
         </div>
       </div>
