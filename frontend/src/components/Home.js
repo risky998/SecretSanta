@@ -1,27 +1,22 @@
-import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
-import "./Home.css";
-import Countdown from "./countdown/Countdown";
-import SnowStorm from "react-snowstorm";
-import "./Faq.css";
+import React, { Component } from 'react';
+import './Home.css';
+import Countdown from './countdown/Countdown';
+import SnowStorm from 'react-snowstorm';
+import './Faq.css';
 
 export default class Home extends Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
-      <div className="home-container">
+      <div className="parent-container">
         <div className="countdown-container">
           <Countdown />
         </div>
         <SnowStorm />
         <div>
-          <section className="sec-faq">
+          {/* <section className="sec-faq">
             <div className="content">
               <h2>
-                <a className="#sec-faq-a">How</a> does this work?
+                <a className=".sec-faq-a">How</a> does this work?
               </h2>
               <br></br>
               <ul>
@@ -36,7 +31,6 @@ export default class Home extends Component {
                 <br></br>
 
                 <li>
-                  {" "}
                   Tell your friends about Cornell Secret Santa and wait till our
                   Secret Santa reveal on Dec. 6!
                 </li>
@@ -46,14 +40,13 @@ export default class Home extends Component {
                 <br></br>
 
                 <li>
-                  {" "}
                   Show up to our Gift Day on Dec. 10 at Ho Plaza (link to FB
                   event) with your gift and find your gift receiver and Secret
-                  Santa!{" "}
+                  Santa!
                 </li>
               </ul>
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
     );

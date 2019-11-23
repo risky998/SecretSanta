@@ -3,7 +3,7 @@ import Navbar from './components/layout/Navbar';
 import SignUp from './components/signup/SignUp';
 import Home from './components/Home';
 import FAQ from './components/Faq';
-import {Route} from 'react-router-dom'
+import { Route } from 'react-router-dom';
 import './app.css';
 
 export default class App extends Component {
@@ -11,12 +11,11 @@ export default class App extends Component {
     return (
       <div>
         <Navbar />
-        <Route exact={true} path = {'/'} component = {Home}/> 
-        <Route exact = {true} path = {'/home'} component = {Home}/>
-        <Route exact = {true} path = {'/faq'} component = {FAQ}/>
-        <Route exact = {true} path = {'/signup'} component = {SignUp}/>
-        </div>
+        <Route exact={true} path={'/'} component={Home} />
+        <Route exact={true} path={'/home'} component={Home} />
+        <Route exact={true} path={'/faq'} component={FAQ} />
+        <Route exact={true} path={'/signup'} component={SignUp} />
+      </div>
     );
-    }
-
+  }
 }

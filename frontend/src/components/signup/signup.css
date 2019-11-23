@@ -5,7 +5,7 @@
 }
 
 .form-container {
-  background: '#FBFBFB'!important; 
+  background-color: '#FBFBFB';
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

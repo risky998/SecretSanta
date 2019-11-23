@@ -4,7 +4,7 @@ import { RadioButtonsGroup } from '../layout/Radio';
 import { SignupButton } from '../layout/SignupButton';
 import { pickBy, keys, mapKeys } from 'lodash';
 import './signup.css';
-import {signupValidation} from '../../functions/signupValidation';
+import { signupValidation } from '../../functions/signupValidation';
 
 export default class SignUp extends Component {
   constructor(props) {
@@ -78,9 +78,9 @@ export default class SignUp extends Component {
       )
     );
     form['categories'] = categories;
-    if (form.categories[form.categories.length - 1] == "Other"){
-      form.categories.pop()
-      form.categories.push(this.state.otherInput)
+    if (form.categories[form.categories.length - 1] == 'Other') {
+      form.categories.pop();
+      form.categories.push(this.state.otherInput);
     }
     console.log(form);
     signupValidation(form);
@@ -107,7 +107,7 @@ export default class SignUp extends Component {
       firstNameError,
       lastNameError,
       emailError,
-      confirmEmailError,
+      confirmEmailError
       // messageError
     } = this.state;
     return (
@@ -125,7 +125,7 @@ export default class SignUp extends Component {
               value={this.state.firstName}
               onChange={e => this.handleChange(e, 'firstName')}
             />
-            {!firstNameError ? (
+            {firstNameError ? (
               <h6 className="error-message">Enter your name!</h6>
             ) : null}
           </div>
@@ -139,7 +139,7 @@ export default class SignUp extends Component {
               id="last_name"
               onChange={e => this.handleChange(e, 'lastName')}
             />
-            {!lastNameError ? (
+            {lastNameError ? (
               <h6 className="error-message">Enter your name!</h6>
             ) : null}
           </div>
@@ -153,7 +153,7 @@ export default class SignUp extends Component {
               id="email"
               onChange={e => this.handleChange(e, 'email')}
             />
-            {!emailError ? (
+            {emailError ? (
               <h6 className="error-message">Enter a valid Cornell email!</h6>
             ) : null}
           </div>
@@ -170,7 +170,7 @@ export default class SignUp extends Component {
               id="confirm_email"
               onChange={e => this.handleChange(e, 'confirmEmail')}
             />
-            {!confirmEmailError ? (
+            {confirmEmailError ? (
               <h6 className="error-message">Emails do not match</h6>
             ) : null}
           </div>
