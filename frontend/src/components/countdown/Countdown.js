@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./countdown.css";
 import background from "../../media/background.png";
-import arrow from "../../media/arrow.png";
+// import arrow from "../../media/arrow.png";
 
 export default class Countdown extends Component {
   constructor(props) {
@@ -70,7 +70,7 @@ export default class Countdown extends Component {
             </div>
           </div>
           <h3 className="matchtext">Till matches are released...</h3>
-          <img className="arrow" src={arrow} />
+          {/* <img className="arrow" src={arrow} /> */}
         </div>
 
         <div className="textrow">

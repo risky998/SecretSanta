@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "cornell-secret-santa",
+    "santa-deployment": "cornell-secret-santa"
+  }
+}
