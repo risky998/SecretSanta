@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Link } from "react-router-dom";
 import "./navbar.css";
-import logo from "../../media/logo.png";
+import navlogo from "../../media/navlogo.png";
 
 export default class Navbar extends Component {
   constructor(props) {
@@ -11,7 +11,7 @@ export default class Navbar extends Component {
   render() {
     return (
       <div className="header">
-        <img className="logo" src={logo} />
+        {/* <img className="navlogo" src={navlogo} /> */}
         <nav id="navbar">
           <ul>
             <li>

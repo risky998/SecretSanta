@@ -1,13 +1,10 @@
 import React, { Component } from "react";
 import "./countdown.css";
 import background from "../../media/background.png";
-<<<<<<< HEAD
+
 import arrow from "../../media/arrow.png";
-=======
-// import arrow from "../../media/arrow.png";
 import logo from "../../media/logo.png";
 import gift from "../../media/gifts.png";
->>>>>>> f9403e09a532886d3322b3c193502c541fd82e8e
 
 export default class Countdown extends Component {
   constructor(props) {
