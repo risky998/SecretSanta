@@ -20,13 +20,13 @@ export default class Navbar extends Component {
               </Link>
             </li>
             <li className="">
-              <Link to={"/faq"}>
-                <a>FAQ</a>
+              <Link to={"/signup"}>
+                <a>Sign Up</a>
               </Link>
             </li>
             <li className="">
-              <Link to={"/signup"}>
-                <a>Sign Up</a>
+              <Link to={"/faq"}>
+                <a>FAQ</a>
               </Link>
             </li>
           </ul>
