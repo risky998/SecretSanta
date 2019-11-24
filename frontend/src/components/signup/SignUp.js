@@ -18,11 +18,13 @@ export default class SignUp extends Component {
         // message: '',
         priceRange: 'five'
       },
-      firstNameError: false,
-      lastNameError: false,
-      emailError: false,
-      confirmEmailError: false,
-      // messageError: false,
+      errors: {
+        firstNameError: false,
+        lastNameError: false,
+        emailError: false,
+        confirmEmailError: false
+        // messageError: false,
+      },
       categories: {
         Art: true,
         Books: false,
@@ -54,7 +56,7 @@ export default class SignUp extends Component {
           ...this.state.categories,
           [name]: event.target.checked
         }
-      },
+      }
       // () => console.log(this.state.categories)
     );
   }
@@ -66,7 +68,7 @@ export default class SignUp extends Component {
     });
   }
 
-  handleSubmit() {
+  async handleSubmit() {
     let form = this.state.values;
     const categories = keys(
       pickBy(
@@ -78,12 +80,102 @@ export default class SignUp extends Component {
       )
     );
     form['categories'] = categories;
-    if (form.categories[form.categories.length - 1] == 'Other') {
+    if (form.categories[form.categories.length - 1] === 'Other') {
       form.categories.pop();
       form.categories.push(this.state.otherInput);
     }
-    // console.log(form);
-    signupValidation(form);
+
+    await this.errorValidation(this.state.values.firstName, 'firstName');
+    await this.errorValidation(this.state.values.lastName, 'lastName');
+    await this.errorValidation(this.state.values.email, 'email');
+    await this.errorValidation(this.state.values.confirmEmail, 'confirmEmail');
+    const errorArr = keys(
+      pickBy(
+        mapKeys(this.state.errors, function(value, key) {
+          if (value) {
+            return key;
+          }
+        })
+      )
+    );
+    console.log(form.categories, form.categories.length !== 0, 'cat');
+    console.log(errorArr, errorArr.length === 0, 'errorArr');
+    console.log(form.categories.length !== 0 && errorArr.legnth === 0);
+    if (form.categories.length !== 0 && errorArr.legnth === 0) {
+      console.log('sending', form.categories.length, errorArr);
+      await signupValidation(form, this.state.errors);
+    }
+  }
+
+  async errorValidation(value, key) {
+    if (key === 'firstName') {
+      if (value === '') {
+        this.setState({
+          errors: {
+            ...this.state.errors,
+            firstNameError: true
+          }
+        });
+      } else {
+        this.setState({
+          errors: {
+            ...this.state.errors,
+            firstNameError: false
+          }
+        });
+      }
+    }
+    if (key === 'lastName') {
+      if (value === '') {
+        this.setState({
+          errors: {
+            ...this.state.errors,
+            lastNameError: true
+          }
+        });
+      } else {
+        this.setState({
+          errors: {
+            ...this.state.errors,
+            lastNameError: false
+          }
+        });
+      }
+    }
+    if (key === 'email') {
+      if (!/[a-z]{2,4}[0-9]{1,4}@cornell\.edu/.test(value)) {
+        this.setState({
+          errors: {
+            ...this.state.errors,
+            emailError: true
+          }
+        });
+      } else {
+        this.setState({
+          errors: {
+            ...this.state.errors,
+            emailError: false
+          }
+        });
+      }
+    }
+    if (key === 'confirmEmail') {
+      if (value !== this.state.values.email) {
+        this.setState({
+          errors: {
+            ...this.state.errors,
+            confirmEmailError: true
+          }
+        });
+      } else {
+        this.setState({
+          errors: {
+            ...this.state.errors,
+            confirmEmailError: false
+          }
+        });
+      }
+    }
   }
 
   handleChange(event, key) {
@@ -94,10 +186,10 @@ export default class SignUp extends Component {
         [key]: value
       }
     });
+    this.errorValidation(value, key);
   }
 
   onPriceRangeChange(price) {
-    // console.log(price)
     this.setState({
       values: {
         ...this.state.values,
@@ -113,7 +205,7 @@ export default class SignUp extends Component {
       emailError,
       confirmEmailError
       // messageError
-    } = this.state;
+    } = this.state.errors;
     return (
       <div className="form-container">
         <form className="signup-form">

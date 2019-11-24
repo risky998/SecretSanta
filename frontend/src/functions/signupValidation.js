@@ -1,4 +1,4 @@
-import React from 'react';
+import { pickBy, mapKeys, keys } from 'lodash';
 
 // Firebase App (the core Firebase SDK) is always required and
 // must be listed before other Firebase SDKs
@@ -10,13 +10,13 @@ const firebaseConfig = {
   apiKey: 'AIzaSyAIlaCmBLkyR7ULibDrOl_sDkVa1vL6fKM',
   authDomain: 'cornell-secret-santa.firebaseapp.com',
   databaseURL: 'https://cornell-secret-santa.firebaseio.com',
-  projectId: 'cornell-secret-santa',  
+  projectId: 'cornell-secret-santa',
   storageBucket: 'cornell-secret-santa.appspot.com',
   messagingSenderId: '813348939741',
   appId: '1:813348939741:web:8d829a38a20481a96df834'
 };
 
-firebase.initializeApp(firebaseConfig)
+firebase.initializeApp(firebaseConfig);
 
 /* Check:
 1. firstName, lastName, message: exists
@@ -27,42 +27,39 @@ firebase.initializeApp(firebaseConfig)
 Then, send error feedback to Signup for error message to be displayed.
 If no errors, send to firebase
 */
-export function signupValidation(form) {
-    if (form.firstName == ""){
-        alert('Empty first name')
-    } else if (form.lastName == ""){
-        alert('Empty last name')
-    } else if (form.confirmEmail != form.email){
-        alert('Emails do not match')
-    } else if (form.categories.length == 0){
-        alert('No categories selected')
-    } else if (!/[a-z]{2,4}[0-9]{1,4}@cornell\.edu/.test(form.email)){
-        alert('Invalid email')
-    } else {
-        let db = firebase.firestore();
-        db.collection('users')
+export function* signupValidation({ form }) {
+  try {
+    let db = firebase.firestore();
+
+    yield new Promise((res, rej) => {
+      db.collection('users')
         .doc(form.email)
         .get()
         .then(doc => {
-            if (doc.exists){
-                alert('You have already signed up')
-                return
-            } else {
-                db.collection('users').doc(form.email).set({
-                    First_Name: form.firstName,
-                    Last_Name: form.lastName,
-                    Email: form.email,
-                    Price_Range: form.priceRange,
-                    Categories: form.categories
-                })
-                .then(() => {
-                    alert('success', 'Your message was sent successfull');
-                })
-                .catch(err => {
-                    console.log(err);
-                    alert('danger', 'Your message could not be sent');
-                });
-            }
-        })
-    }
+          console.log('here');
+          if (doc.exists) {
+            alert('You have already signed up');
+            return;
+          } else {
+            db.collection('users')
+              .doc(form.email)
+              .set({
+                First_Name: form.firstName,
+                Last_Name: form.lastName,
+                Email: form.email,
+                Price_Range: form.priceRange,
+                Categories: form.categories
+              })
+
+              .then(() => {
+                res();
+                alert('success', 'Your message was sent successfull');
+              });
+          }
+        });
+    });
+  } catch (e) {
+    console.log(e);
+    alert('danger', 'Your message could not be sent');
+  }
 }
