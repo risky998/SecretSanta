@@ -118,7 +118,7 @@ export default class Countdown extends Component {
               <li>
                 Show up to our
                 <a href="https://www.facebook.com/events/486709211935483/">
-                  Gift Day on <strong>Dec. 10 at Ho Plaza</strong>
+                 <u> Gift Day on <strong>Dec. 10 at Ho Plaza</strong> </u>
                 </a>
                 with your gift and find your gift receiver and Secret Santa!{' '}
               </li>
