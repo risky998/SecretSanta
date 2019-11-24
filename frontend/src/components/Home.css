@@ -8,9 +8,8 @@
 
 .parent-container {
   /* font-family: 'Mountains of Christmas', cursive; */
-  height: 70%;
-
-  font-family: 'Amatic SC', cursive;
+  height: 250px;
+  font-family: "Amatic SC", cursive;
   background-image: linear-gradient(to bottom, #cdf3ff, rgba(255, 255, 255));
   background-repeat: no-repeat;
   scroll-behavior: smooth;
@@ -24,7 +23,7 @@
   margin-right: auto;
 }
 
-.santa-logo{
+.santa-logo {
   width: 50%;
   display: block;
   margin-top: 10%;
