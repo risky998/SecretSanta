@@ -1,12 +1,9 @@
-import React, { Component } from "react";
-import { Route, Link } from "react-router-dom";
-import "./countdown.css";
-import background from "../../media/background.png";
-
-import arrow from "../../media/arrow.png";
-import logo from "../../media/logo.png";
-import gift from "../../media/gifts.png";
-import SignUp from "../signup/SignUp";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import './countdown.css';
+import background from '../../media/background.png';
+import logo from '../../media/logo.png';
+import gift from '../../media/gifts.png';
 
 export default class Countdown extends Component {
   constructor(props) {
@@ -44,10 +41,10 @@ export default class Countdown extends Component {
     minutes %= 60;
     hours %= 24;
 
-    days = days < 10 ? "0" + days : days;
-    hours = hours < 10 ? "0" + hours : hours;
-    minutes = minutes < 10 ? "0" + minutes : minutes;
-    seconds = seconds < 10 ? "0" + seconds : seconds;
+    days = days < 10 ? '0' + days : days;
+    hours = hours < 10 ? '0' + hours : hours;
+    minutes = minutes < 10 ? '0' + minutes : minutes;
+    seconds = seconds < 10 ? '0' + seconds : seconds;
 
     this.setState({ days, hours, minutes, seconds });
   }
@@ -55,7 +52,7 @@ export default class Countdown extends Component {
   render() {
     return (
       <div className="parent-container">
-        <div className="container">
+        <div>
           <img className="background" src={background} />
           <div className="countdownBox">
             <div className="countdownRow">
@@ -81,7 +78,6 @@ export default class Countdown extends Component {
           </div>
 
           <h3 className="matchtext">Till matches are released...</h3>
-          {/* <img className="arrow" src={arrow} /> */}
         </div>
         <br></br>
         <br></br>
@@ -97,8 +93,7 @@ export default class Countdown extends Component {
             </p>
           </div>
         </div>
-        <br></br>
-        <br></br>
+
         <div className="textrow2">
           <div className="textcol2">
             {/* <h4 className = "paragraph">
@@ -116,18 +111,16 @@ export default class Countdown extends Component {
                 you with your perfect Santa!
               </li>
               <li>
-                {" "}
                 Tell your friends about Cornell Secret Santa and wait till our
                 Secret Santa reveal on <strong>Dec. 6</strong>!
               </li>
               <li> Purchase your gift for your gift receiver! </li>
               <li>
-                {" "}
-                Show up to our{" "}
+                Show up to our
                 <a href="https://www.facebook.com/events/486709211935483/">
                   Gift Day on <strong>Dec. 10 at Ho Plaza</strong>
-                </a>{" "}
-                with your gift and find your gift receiver and Secret Santa!{" "}
+                </a>
+                with your gift and find your gift receiver and Secret Santa!{' '}
               </li>
             </ol>
             <p className="normaltext1"> May your wish come true! </p>
@@ -138,10 +131,8 @@ export default class Countdown extends Component {
           </div>
         </div>
         <div className="signuprow">
-          <Link to={"/signup"}>
-            <a className="signup" onClick={this.componentDidMount1}>
-              Sign Up Here
-            </a>
+          <Link to={'/signup'} onClick={this.componentDidMount1}>
+            Sign Up Here
           </Link>
         </div>
       </div>

@@ -3,6 +3,7 @@ import { Link, withRouter } from 'react-router-dom';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import './navbar.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import navlogo from '../../media/navlogo.png';
 
 const NavigationBar = props => {
