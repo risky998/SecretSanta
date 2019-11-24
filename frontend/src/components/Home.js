@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './Home.css';
 import Countdown from './countdown/Countdown';
 import SnowStorm from 'react-snowstorm';
-import './Faq.css';
+// import './Faq.css';
 
 export default class Home extends Component {
   render() {
@@ -12,7 +12,6 @@ export default class Home extends Component {
           <Countdown />
         </div>
         <SnowStorm />
-
       </div>
     );
   }

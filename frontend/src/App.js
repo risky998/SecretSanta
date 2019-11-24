@@ -5,7 +5,6 @@ import Home from './components/Home';
 import FAQ from './components/Faq';
 import { Route } from 'react-router-dom';
 import './app.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default class App extends Component {
   render() {

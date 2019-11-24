@@ -29,15 +29,15 @@ If no errors, send to firebase
 */
 export function signupValidation(form) {
     if (form.firstName == ""){
-        alert('Empty first name')
+        alert('Please enter your first name!')
     } else if (form.lastName == ""){
-        alert('Empty last name')
+        alert('Please enter your last name!')
     } else if (form.confirmEmail != form.email){
         alert('Emails do not match')
     } else if (form.categories.length == 0){
         alert('No categories selected')
     } else if (!/[a-z]{2,4}[0-9]{1,4}@cornell\.edu/.test(form.email)){
-        alert('Invalid email')
+        alert('Invalid email. Please enter a valid cornell email! If you have a cornell email which was not accepted, please contact us at yy447@cornell.edu')
     } else {
         let db = firebase.firestore();
         db.collection('users')
@@ -45,7 +45,7 @@ export function signupValidation(form) {
         .get()
         .then(doc => {
             if (doc.exists){
-                alert('You have already signed up')
+                alert('You have already signed up. If you think there was a mistake, please contact us as yy447@cornell.edu')
                 return
             } else {
                 db.collection('users').doc(form.email).set({
@@ -56,7 +56,7 @@ export function signupValidation(form) {
                     Categories: form.categories
                 })
                 .then(() => {
-                    alert('success', 'Your message was sent successfull');
+                    alert('Thank you for signing up! You can now close this page, and wait for an email notifying you on your gift recipient.', 'Your message was sent successfull');
                 })
                 .catch(err => {
                     console.log(err);
