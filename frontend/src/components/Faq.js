@@ -38,9 +38,9 @@ export default class FAQ extends Component {
                     <div className = "emails">
                       <p> yw456@cornell.edu, sp798@cornell.edu, rs868@cornell.edu </p>
                     </div>
+                    </div>
                    <div className = "emails">
                       <p> hyw2@cornell.edu, kc677@cornell.edu, yy447@cornell.edu, sl2982@cornell.edu </p>
-                    </div>
                     </div>
                     </div>
               </div>

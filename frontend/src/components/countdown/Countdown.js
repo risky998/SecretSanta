@@ -86,10 +86,10 @@ export default class Countdown extends Component {
         </div>
 
         <div className="textrow1">
-          <div className="col-md-6">
+          <div className=" text-center col-md-6">
             <img className="logo" src={logo}></img>
           </div>
-          <div className="col-md-6">
+          <div className="text-center col-md-6">
             <p className="normaltext">
               Welcome to Cornell Secret Santa! This Christmas, we want everyone
               at Cornell to enjoy the festive season by participating in a
@@ -99,7 +99,7 @@ export default class Countdown extends Component {
         </div>
 
         <div className="textrow1">
-          <div className="col-md-6">
+          <div className="text-center col-md-6">
             <h2 className="How_works"> How this works</h2>
             <ol className="list">
               <li>
@@ -126,7 +126,7 @@ export default class Countdown extends Component {
             <p className="normaltext1"> May your wish come true! </p>
             <p className="normaltext1">— ❤ Cornell Secret Santa Team </p>
           </div>
-          <div className="col-md-6">
+          <div className="text-center col-md-6">
             <img className="gift" src={gift}></img>
           </div>
         </div>
