@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { Route, Link } from "react-router-dom";
 import "./countdown.css";
 import background from "../../media/background.png";
 
 import arrow from "../../media/arrow.png";
 import logo from "../../media/logo.png";
 import gift from "../../media/gifts.png";
+import SignUp from "../signup/SignUp";
 
 export default class Countdown extends Component {
   constructor(props) {
@@ -19,6 +21,10 @@ export default class Countdown extends Component {
 
   componentDidMount() {
     setInterval(() => this.countdown(), 1000);
+  }
+
+  componentDidMount1() {
+    window.scrollTo(0, 0);
   }
 
   countdown() {
@@ -48,8 +54,7 @@ export default class Countdown extends Component {
 
   render() {
     return (
-      <div>
-        
+      <div className="parent-container">
         <div className="container">
           <img className="background" src={background} />
           <div className="countdownBox">
@@ -74,22 +79,18 @@ export default class Countdown extends Component {
             </div>
             <br></br>
           </div>
-          
+
           <h3 className="matchtext">Till matches are released...</h3>
-          <img className="arrow" src={arrow} />
+          {/* <img className="arrow" src={arrow} /> */}
         </div>
         <br></br>
         <br></br>
-
-        <div className="textrow">
+        <div className="textrow1">
           <div className="imgcol">
-            {/* <h2 className="biggertext"> CORNELL</h2>
-            <h2 className="smallertext"> SECRET SANTA</h2> */}
-            <img className = "logo" src = {logo}></img>
+            <img className="logo" src={logo}></img>
           </div>
           <div className="textcol">
-            <p className="normaltext" >
-              <br></br>
+            <p className="normaltext">
               Welcome to Cornell Secret Santa! This Christmas, we want everyone
               at Cornell to enjoy the festive season by participating in a
               campus-wide Secret Santa gift exchange!
@@ -98,49 +99,50 @@ export default class Countdown extends Component {
         </div>
         <br></br>
         <br></br>
-        <div className="textrow">
+        <div className="textrow2">
           <div className="textcol2">
-          {/* <h4 className = "paragraph">
+            {/* <h4 className = "paragraph">
               <b>How</b> does this work?
             </h4 >
             <br></br> */}
-            <ol className = "list">
-              <br></br>
-              <br></br>
+            <h2 className="How_works"> How this works</h2>
+            <ol className="list">
               <li>
-                Sign up on Nov. 22 to participate in the Secret Santa draw.
+                Sign up on <strong>Nov. 22</strong> to participate in the Secret
+                Santa draw.
               </li>
-              <br></br>
               <li>
                 Make sure to add your interests and price range so we can match
                 you with your perfect Santa!
               </li>
-              <br></br>
-
               <li>
-                {' '}
+                {" "}
                 Tell your friends about Cornell Secret Santa and wait till our
-                Secret Santa reveal on Dec. 6!
+                Secret Santa reveal on <strong>Dec. 6</strong>!
               </li>
-              <br></br>
-
               <li> Purchase your gift for your gift receiver! </li>
-              <br></br>
-
               <li>
-                {' '}
-                Show up to our Gift Day on Dec. 10 at Ho Plaza (link to FB
-                event) with your gift and find your gift receiver and Secret
-                Santa!{' '}
+                {" "}
+                Show up to our{" "}
+                <a href="https://www.facebook.com/events/486709211935483/">
+                  Gift Day on <strong>Dec. 10 at Ho Plaza</strong>
+                </a>{" "}
+                with your gift and find your gift receiver and Secret Santa!{" "}
               </li>
             </ol>
-           
+            <p className="normaltext1"> May your wish come true! </p>
+            <p className="normaltext1">— ❤ Cornell Secret Santa Team </p>
           </div>
-          <div className="textcol">
-            <h4 className="paragraph">
-            <img className = "gift" src = {gift}></img>
-            </h4>
+          <div className="imgcol">
+            <img className="gift" src={gift}></img>
           </div>
+        </div>
+        <div className="signuprow">
+          <Link to={"/signup"}>
+            <a className="signup" onClick={this.componentDidMount1}>
+              Sign Up Here
+            </a>
+          </Link>
         </div>
       </div>
     );
