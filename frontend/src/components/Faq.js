@@ -29,33 +29,20 @@ export default class FAQ extends Component {
           <p> Yes! Feel free to reach out to your gift recipient beforehand and make a new friend!
           However, if you want to keep the surprise factor you can also just meet your gift recipient on Gift Day. </p>
 
-          <div className = "row"> 
-            <div className = "imgcol">
-             <h2 className = "colortext"> If you have any other questions or concerns, please contact any one of us </h2>
-              <div className = "shiftcenter">
-                <div className = "row">
-                  <div className = "row">
-                    <div className = "emails">
-                      <p> yw456@cornell.edu, sp798@cornell.edu, rs868@cornell.edu </p>
-                    </div>
-                    </div>
-                   <div className = "emails">
-                      <p> hyw2@cornell.edu, kc677@cornell.edu, yy447@cornell.edu, sl2982@cornell.edu </p>
-                    </div>
-                    </div>
-              </div>
+          <h2 className = "colortext"> If you have any other questions or concerns, please contact any one of us </h2>
+          <div className = "shiftcenter">
+          <div className = "row">
+                <div className = "emails">
+                    <p> yw456@cornell.edu, sp798@cornell.edu, rs868@cornell.edu </p>
+                </div>
+                <div className = "emails">
+                    <p> hyw2@cornell.edu, kc677@cornell.edu, yy447@cornell.edu, sl2982@cornell.edu </p>
+                </div>
+                <img className ="imageblock" src={question} alt = "Question photo"/>
             </div>
-            <div className = "imgcol">
-              <div className = "image">
-
-            <img className ="imageblock" src={question} alt = "Question photo"/>
-            </div>
-            </div>
-
-            
         </div>
- 
-          </div>
+
+        </div>
         </section>
       </div>
     );
