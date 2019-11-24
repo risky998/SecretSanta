@@ -80,6 +80,10 @@ section {
     text-align: center;
 }
 
+.colortext {
+  color: red
+}
+
 .emails {
     font-size: 100%;
     display: inline-block;
@@ -99,10 +103,14 @@ section {
 
 .imageblock{
     display: flex;
+    align-content: right;
+    padding-right: 20%;
 
 }
 
 .image {
     width: 50%;
+    align-content: right;
+    padding-left: 30%;
 
 }
