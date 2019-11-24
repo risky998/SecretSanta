@@ -10,7 +10,7 @@
   width: 100%;
   position: absolute;
   top: 0%;
-  margin: 25.5% auto 5% auto;
+  margin: 25.5% auto 10% auto;
   font-family: "Roboto Condensed";
 }
 
@@ -84,8 +84,9 @@
   position: absolute;
   width: 100%;
   text-align: center;
-  top: 92%;
+  top: 95%;
   color: #314667;
+  font-size: 35px;
   font-weight: bold;
   font-family: "Roboto Condensed";
 }
