@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import FormLabel from '@material-ui/core/FormLabel';
-import FormControl from '@material-ui/core/FormControl';
-import FormGroup from '@material-ui/core/FormGroup';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import Checkbox from '@material-ui/core/Checkbox';
-import './checkbox.css';
+import React, { useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import FormLabel from "@material-ui/core/FormLabel";
+import FormControl from "@material-ui/core/FormControl";
+import FormGroup from "@material-ui/core/FormGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import FormHelperText from "@material-ui/core/FormHelperText";
+import Checkbox from "@material-ui/core/Checkbox";
+import "./checkbox.css";
 
 export const CheckboxesGroup = props => {
   const {
@@ -36,14 +36,16 @@ export const CheckboxesGroup = props => {
   return (
     <div className="container">
       <FormControl required error={error} component="fieldset">
-        <FormLabel component="legend">Categories</FormLabel>
+        <FormLabel component="legend">
+          What are your area(s) of interest?
+        </FormLabel>
         <FormGroup>
           <FormControlLabel
             control={
               <Checkbox
                 checked={Art}
                 onChange={e => {
-                  props.onCheckboxChange('Art', e);
+                  props.onCheckboxChange("Art", e);
                   console.log(e.target.checked);
                 }}
               />
@@ -54,7 +56,7 @@ export const CheckboxesGroup = props => {
             control={
               <Checkbox
                 checked={Books}
-                onChange={e => props.onCheckboxChange('Books', e)}
+                onChange={e => props.onCheckboxChange("Books", e)}
               />
             }
             label="Books"
@@ -63,7 +65,7 @@ export const CheckboxesGroup = props => {
             control={
               <Checkbox
                 checked={Fashion}
-                onChange={e => props.onCheckboxChange('Fashion', e)}
+                onChange={e => props.onCheckboxChange("Fashion", e)}
               />
             }
             label="Fashion"
@@ -72,7 +74,7 @@ export const CheckboxesGroup = props => {
             control={
               <Checkbox
                 checked={Food}
-                onChange={e => props.onCheckboxChange('Food', e)}
+                onChange={e => props.onCheckboxChange("Food", e)}
               />
             }
             label="Food"
@@ -81,7 +83,7 @@ export const CheckboxesGroup = props => {
             control={
               <Checkbox
                 checked={Games}
-                onChange={e => props.onCheckboxChange('Games', e)}
+                onChange={e => props.onCheckboxChange("Games", e)}
               />
             }
             label="Games"
@@ -91,7 +93,7 @@ export const CheckboxesGroup = props => {
             control={
               <Checkbox
                 checked={Movies}
-                onChange={e => props.onCheckboxChange('Movies', e)}
+                onChange={e => props.onCheckboxChange("Movies", e)}
               />
             }
             label="Movies"
@@ -101,7 +103,7 @@ export const CheckboxesGroup = props => {
             control={
               <Checkbox
                 checked={Sports}
-                onChange={e => props.onCheckboxChange('Sports', e)}
+                onChange={e => props.onCheckboxChange("Sports", e)}
               />
             }
             label="Sports"
@@ -111,7 +113,7 @@ export const CheckboxesGroup = props => {
             control={
               <Checkbox
                 checked={Stationery}
-                onChange={e => props.onCheckboxChange('Stationery', e)}
+                onChange={e => props.onCheckboxChange("Stationery", e)}
               />
             }
             label="Stationery"
@@ -121,7 +123,7 @@ export const CheckboxesGroup = props => {
               control={
                 <Checkbox
                   checked={Other}
-                  onChange={e => props.onCheckboxChange('Other', e)}
+                  onChange={e => props.onCheckboxChange("Other", e)}
                 />
               }
               label="Other:"
