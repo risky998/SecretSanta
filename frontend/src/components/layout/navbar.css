@@ -19,7 +19,7 @@
   font-family: "Roboto Condensed";
   margin-top: auto;
   margin-bottom: auto;
-  width: 30%;
+  width: 35%;
 }
 
 #navbar ul {
@@ -34,6 +34,7 @@
   text-align: center;
   margin-left: 10%;
   font-size: 25px;
+  margin-right: 5%;
 }
 
 #navbar ul li.active > a {

@@ -1,22 +1,22 @@
-import React, { Component } from 'react';
-import { CheckboxesGroup } from '../layout/Checkbox';
-import { RadioButtonsGroup } from '../layout/Radio';
-import { SignupButton } from '../layout/SignupButton';
-import { pickBy, keys, mapKeys } from 'lodash';
-import './signup.css';
-import { signupValidation } from '../../functions/signupValidation';
+import React, { Component } from "react";
+import { CheckboxesGroup } from "../layout/Checkbox";
+import { RadioButtonsGroup } from "../layout/Radio";
+import { SignupButton } from "../layout/SignupButton";
+import { pickBy, keys, mapKeys } from "lodash";
+import "./signup.css";
+import { signupValidation } from "../../functions/signupValidation";
 
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
       values: {
-        firstName: '',
-        lastName: '',
-        email: '',
-        confirmEmail: '',
+        firstName: "",
+        lastName: "",
+        email: "",
+        confirmEmail: "",
         // message: '',
-        priceRange: 'five'
+        priceRange: "five"
       },
       firstNameError: false,
       lastNameError: false,
@@ -34,7 +34,7 @@ export default class SignUp extends Component {
         Stationery: false,
         Other: false
       },
-      otherInput: ''
+      otherInput: ""
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
@@ -54,7 +54,7 @@ export default class SignUp extends Component {
           ...this.state.categories,
           [name]: event.target.checked
         }
-      },
+      }
       // () => console.log(this.state.categories)
     );
   }
@@ -77,8 +77,8 @@ export default class SignUp extends Component {
         })
       )
     );
-    form['categories'] = categories;
-    if (form.categories[form.categories.length - 1] == 'Other') {
+    form["categories"] = categories;
+    if (form.categories[form.categories.length - 1] == "Other") {
       form.categories.pop();
       form.categories.push(this.state.otherInput);
     }
@@ -124,10 +124,10 @@ export default class SignUp extends Component {
             <input
               className="input-box"
               type="text"
-              placeholder="Enter your name"
+              placeholder="Enter your first name"
               id="first_name"
               value={this.state.firstName}
-              onChange={e => this.handleChange(e, 'firstName')}
+              onChange={e => this.handleChange(e, "firstName")}
             />
             {firstNameError ? (
               <h6 className="error-message">Enter your name!</h6>
@@ -139,9 +139,9 @@ export default class SignUp extends Component {
             <input
               className="input-box"
               type="text"
-              placeholder="Enter your name"
+              placeholder="Enter your last name"
               id="last_name"
-              onChange={e => this.handleChange(e, 'lastName')}
+              onChange={e => this.handleChange(e, "lastName")}
             />
             {lastNameError ? (
               <h6 className="error-message">Enter your name!</h6>
@@ -153,9 +153,9 @@ export default class SignUp extends Component {
             <input
               className="input-box"
               type="text"
-              placeholder="@cornell.edu"
+              placeholder="@cornell.edu addresses only"
               id="email"
-              onChange={e => this.handleChange(e, 'email')}
+              onChange={e => this.handleChange(e, "email")}
             />
             {emailError ? (
               <h6 className="error-message">Enter a valid Cornell email!</h6>
@@ -170,9 +170,9 @@ export default class SignUp extends Component {
             <input
               className="input-box"
               type="text"
-              placeholder=""
+              placeholder="@cornell.edu addresses only"
               id="confirm_email"
-              onChange={e => this.handleChange(e, 'confirmEmail')}
+              onChange={e => this.handleChange(e, "confirmEmail")}
             />
             {confirmEmailError ? (
               <h6 className="error-message">Emails do not match</h6>
