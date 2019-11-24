@@ -2,8 +2,6 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 
 .countdownBox {
-  /* width: 90px;
-    height: 90px; */
   display: flex;
   flex-direction: column;
   vertical-align: middle;
@@ -11,82 +9,64 @@
   position: absolute;
   top: 0%;
   margin: 25.5% auto 10% auto;
-  font-family: 'Roboto Condensed';
 }
 
 .countdownRow {
   display: flex;
-  flex-direction: row;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+  justify-content: center;
 }
 
-.countdownRow1 {
+.countdownCol {
   display: flex;
-  flex-direction: row;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+  flex-direction: column;
+  width: 100%;
 }
 
-.countdownRow h3 {
+.countdownColon h3 {
+  font-size: 10vw;
+  font-weight: bold;
+  font-family: 'Roboto Condensed';
+}
+
+@media screen and (max-width: 480px) {
+  .countdownColon h3 {
+    font-size: 12vw;
+  }
+
+  .time-text {
+    font-size: 20vw;
+  }
+
+  /* .day-text {
+    font-size: 1em;
+  } */
+}
+
+.time-text {
   text-align: center;
-  width: 30%;
-  font-size: 150px;
+  font-size: 16vw;
   color: black;
   line-height: 85%;
+  font-family: 'Roboto Condensed';
 }
 
-.col1 h3 {
+.day-text {
   text-align: center;
-  font-size: 35px;
+  font-size: 4vw;
   font-weight: bold;
   color: #314667;
-  margin-right: 45%;
-}
-
-.col2 h3 {
-  text-align: center;
-  font-size: 35px;
-  font-weight: bold;
-  color: #314667;
-  margin-right: 27%;
-}
-
-.col1 {
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-  margin-left: 3%;
-}
-
-.col2 {
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-  margin-left: 10%;
-}
-
-.title {
-  font-size: 200%;
+  font-family: 'Roboto Condensed';
 }
 
 .parent-container {
-  /* font-family: 'Mountains of Christmas', cursive; */
   height: 250px;
-  font-family: 'Amatic SC', cursive;
   background-image: linear-gradient(to bottom, #cdf3ff, rgba(255, 255, 255));
   background-repeat: no-repeat;
   scroll-behavior: smooth;
 }
 
 .matchtext {
-  margin-top: 20px;
+  margin-top: 60px;
   position: relative;
   width: 100%;
   text-align: center;
@@ -94,6 +74,14 @@
   font-size: 35px;
   font-weight: bold;
   font-family: 'Roboto Condensed';
+}
+
+.normaltext {
+  font-family: 'Roboto Condensed';
+  text-align: left;
+  line-height: 40px;
+  text-justify: inter-word;
+  color: #314667;
 }
 
 .How_works {
@@ -105,21 +93,11 @@
 
 .textrow1 {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
   margin-top: 5%;
   margin-bottom: 5%;
-}
-
-.textrow2 {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 2%;
-}
-
-.imgcol {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
+  width: 100%;
+  position: relative;
 }
 
 .logo {
@@ -131,62 +109,6 @@
   margin: 0 auto 0 auto;
   width: 60%;
   margin-right: 20%;
-}
-
-.textcol {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding-right: 10%;
-  margin: auto 0 auto 0;
-}
-
-.textcol2 {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding-left: 13%;
-}
-
-.biggertext {
-  font-family: 'BenchNine';
-  color: #b31b1b;
-  font-size: 200px;
-  text-align: center;
-}
-
-.smallertext {
-  font-family: 'BenchNine';
-  color: #b31b1b;
-  font-size: 130px;
-  text-align: center;
-}
-
-.normaltext {
-  font-family: 'Roboto Condensed';
-  text-align: left;
-  line-height: 40px;
-  text-justify: inter-word;
-  color: #314667;
-}
-
-.normaltext1 {
-  font-family: 'Roboto Condensed';
-  text-align: left;
-  line-height: 40px;
-  text-justify: inter-word;
-  font-size: 20px;
-  color: #314667;
-}
-
-.paragraph {
-  font-family: 'Roboto-condensed';
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 15%;
-  margin-left: 10%;
-  line-height: 30px;
-  text-justify: inter-word;
 }
 
 .list {
@@ -215,17 +137,6 @@
   text-align: center;
   margin-bottom: 10%;
 }
-
-/* .signup {
-  font-size: 50px;
-  font-weight: bold;
-  padding-bottom: 1%;
-  border-bottom: solid;
-  border-bottom-color: #b31b1b;
-  font-family: "Roboto Condensed";
-  text-decoration: none !important;
-  color: #314667;
-} */
 
 .signuprow > a {
   font-size: 50px;
