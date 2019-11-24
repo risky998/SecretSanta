@@ -1,57 +1,24 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  margin: 1% 0% 1% 5%;
-  height: 100%;
-  /* background-color: pink; */
-}
-
-.navlogo {
-  margin-top: auto;
-  margin-bottom: auto;
-}
-
-.nav {
-  background: white;
-  /* max-width: 1920px; */
-  font-family: "Roboto Condensed";
-  margin-top: auto;
-  margin-bottom: auto;
-  width: 30%;
-}
-
-#navbar ul {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  margin-bottom: 0px; /* Override Bootstrap */
-}
-
-#navbar ul li {
-  display: inline-block;
-  text-align: center;
-  margin-left: 10%;
-  font-size: 25px;
-}
-
-#navbar ul li.active > a {
-  color: #dc143c !important;
-}
-
-#navbar ul li > a:hover {
-  color: #818181;
-  border-bottom-color: rgb(214, 140, 140);
-}
-
-#navbar ul li > a {
+.link {
   text-transform: uppercase;
   color: #314667;
   letter-spacing: 0.08em;
   text-decoration: none !important; /* FIX */
   font-weight: bold;
   padding-bottom: 1%;
+  border: none;
+}
+
+a.link:hover {
+  color: #818181;
+}
+
+.active-link {
   border-bottom: solid;
   border-bottom-color: #b31b1b;
+}
+
+.active:hover {
+  border-bottom-color: rgb(214, 140, 140);
 }
