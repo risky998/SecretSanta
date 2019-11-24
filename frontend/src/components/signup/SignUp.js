@@ -80,7 +80,9 @@ export default class SignUp extends Component {
     form["categories"] = categories;
     if (form.categories[form.categories.length - 1] == "Other") {
       form.categories.pop();
-      form.categories.push(this.state.otherInput);
+      if (this.state.otherInput != ""){
+        form.categories.push(this.state.otherInput);
+      }
     }
     // console.log(form);
     signupValidation(form);
