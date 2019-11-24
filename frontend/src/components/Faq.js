@@ -1,121 +1,50 @@
 import React, { Component } from 'react';
 import './Home.css';
 import './Faq.css';
-import SnowStorm from 'react-snowstorm';
-import background from '../media/background-crop.png';
+import question from '../media/questions.png';
 
 export default class FAQ extends Component {
   render() {
     return (
-      <div >
-        <img className="background" src={background} />
-        <SnowStorm />
-        <br></br>
+      <div className="parent-container">
         <section className="sec-faq">
           <div className="content">
-            <h1>
-              <b>Welcome</b> to the 2019 Secret Santa Gift Exchange FAQ Section!
-            </h1>
-            <br></br>
-            <br></br>
-            <h2>
-              <b>How</b> does this work?
-            </h2>
-            <br></br>
-            <ul>
-              <li>
-                Sign up on Nov. 22 to participate in the Secret Santa draw.
-              </li>
-              <br></br>
-              <li>
-                Make sure to add your interests and price range so we can match
-                you with your perfect Santa!
-              </li>
-              <br></br>
+          <h1><b>Frequently Asked Questions </b></h1>
+          <h2> What happens if I don’t receive a gift on Gift Day? </h2>
+          <p>All Santas are reminded to get a gift for their gift recipients!
+          In the event that your Santa doesn’t show up with a gift on Gift Day,
+          the Cornell Secret Santa team has spare gifts for you! We want to make sure
+          this is an inclusive event and no one leaves Gift Day without a gift! </p>
 
-              <li>
-                {' '}
-                Tell your friends about Cornell Secret Santa and wait till our
-                Secret Santa reveal on Dec. 6!
-              </li>
-              <br></br>
+          <h2> I don’t know what to get as a gift, what should I do? </h2>
+          <p> We matched Santas and gift receivers based on their interests and
+          price range! Check the email confirming your gift recipient to see what
+          interests they have! </p>
 
-              <li> Purchase your gift for your gift receiver! </li>
-              <br></br>
+          <h2> How am I being matched with my gift recipient and Secret Santa? </h2>
+          <p> We have created a simple algorithm that matches people based on their
+          common interests and price range for gifts in order to optimize your gift experience! </p>
 
-              <li>
-                {' '}
-                Show up to our Gift Day on Dec. 10 at Ho Plaza (link to FB
-                event) with your gift and find your gift receiver and Secret
-                Santa!{' '}
-              </li>
-            </ul>
+          <h2> Can I contact my gift recipient before Gift Day? </h2>
+          <p> Yes! Feel free to reach out to your gift recipient beforehand and make a new friend!
+          However, if you want to keep the surprise factor you can also just meet your gift recipient on Gift Day. </p>
 
-            <br></br>
-            <br></br>
-
-            <h2>
-            <b>What</b> gifts could I buy?
-            </h2>
-            <br></br>
-            <h5>
-              {' '}
-              Of course, the gifts you're willing to buy will be based on the
-              price range you entered when you sign up!
-            </h5>
-            <h5> Here are some ideas! </h5>
-            <br></br>
-            <ul>
-              <li> Reading: Bookmarks, Reading Light, A Good Book</li>
-              <br></br>
-              <li>Music: CDs, A Month of Apple Music</li>
-              <br></br>
-
-              <li>
-                {' '}
-                Tell your friends about Cornell Secret Santa and wait till our
-                Secret Santa reveal on Dec. 6!
-              </li>
-              <br></br>
-
-              <li> Purchase your gift for your gift receiver! </li>
-              <br></br>
-
-              <li>
-                {' '}
-                Show up to our Gift Day on Dec. 10 at Ho Plaza (link to FB
-                event) with your gift and find your gift receiver and Secret
-                Santa!{' '}
-              </li>
-            </ul>
-            <br></br>
-            <h2>
-            <b>How</b> does the matching process work?
-            </h2>
-            <br></br>
-
-            <ul>
-              <li> You enter your interests and price range</li>
-              <br></br>
-              <li>Our algorithm matches you with your perfect Secret Santa!</li>
-              <br></br>
-            </ul>
-
-            <br></br>
-            <h2>
-            <b>What</b> happens if I don't get a gift?
-            </h2>
-            <br></br>
-
-            <ul>
-              <li> No one leaves without a gift!</li>
-              <br></br>
-              <li>
-                If for some reason, you are giftless on the day of the event,
-                the Cornell Secret Santa team will have a gift for you :)
-              </li>
-              <br></br>
-            </ul>
+          <h2> Any other questions or concerns, please contact any one of us </h2>
+          <div className = "shiftcenter">
+            <div className = "row">
+            <div className = "row">
+            <div className = "emails">
+                <p> yw456@cornell.edu, sp798@cornell.edu, rs868@cornell.edu </p>
+            </div>
+            <div className = "emails">
+                <p> hyw2@cornell.edu, kc677@cornell.edu, yy447@cornell.edu, sl2982@cornell.edu </p>
+            </div>
+            <div  className ="image">
+                <img className ="imageblock" src={question} alt = "Question photo"/>
+            </div>
+            </div>
+            </div>
+        </div>
           </div>
         </section>
       </div>
