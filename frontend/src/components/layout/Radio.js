@@ -4,6 +4,7 @@ import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import FormControl from "@material-ui/core/FormControl";
 import FormLabel from "@material-ui/core/FormLabel";
+import "./checkbox.css";
 
 export const RadioButtonsGroup = props => {
   const [value, setValue] = useState("five");
@@ -18,7 +19,7 @@ export const RadioButtonsGroup = props => {
       <FormControl component="fieldset">
         <FormLabel
           component="legend"
-          style={{ fontFamily: "Poppins", marginBottom: 20 }}
+          style={{ fontFamily: "Roboto Condensed", marginBottom: 20 }}
         >
           How much are you willing to spend on the gift?
         </FormLabel>

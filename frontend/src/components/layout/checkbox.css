@@ -1,5 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+
 .container {
   display: flex;
+  font-family: "Roboto Condensed";
 }
 
 .input-other {
@@ -9,6 +12,7 @@
   outline: 0;
   border-width: 0 0 2px;
   border-bottom: 2px solid #d9d9d9;
+  font-family: "Roboto Condensed";
 }
 
 .input-other:focus {

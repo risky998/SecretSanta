@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+
 * {
   margin: 0px;
   padding: 0px;
@@ -5,7 +7,7 @@
 }
 
 .form-container {
-  background-color: '#FBFBFB';
+  background-color: "#FBFBFB";
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,6 +15,7 @@
   padding: 15px;
   background: transparent;
   position: relative;
+  font-family: "Roboto Condensed";
 }
 
 .signup-form {
@@ -38,7 +41,6 @@
 .signup-form-title {
   display: block;
   width: 100%;
-  font-family: 'Poppins';
   font-weight: 800;
   font-size: 39px;
   color: #333333;
@@ -55,7 +57,6 @@
 }
 
 .input-label {
-  font-family: 'Poppins';
   font-size: 15px;
   color: #999999;
   line-height: 1.5;
@@ -65,7 +66,6 @@
 .input-box {
   display: block;
   width: 100%;
-  font-family: 'Poppins';
   font-weight: 600;
   font-size: 18px;
   background: transparent;
@@ -84,7 +84,7 @@
 }
 
 .error-message {
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-weight: 400;
   color: red;
   margin-left: 5px;
