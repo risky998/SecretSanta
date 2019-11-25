@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Amatic+SC&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 
 * {
   box-sizing: border-box;
@@ -9,7 +10,7 @@
 .parent-container {
   /* font-family: 'Mountains of Christmas', cursive; */
   height: 250px;
-  font-family: "Amatic SC", cursive;
+  font-family: "Roboto Condensed";
   background-image: linear-gradient(to bottom, #cdf3ff, rgba(255, 255, 255));
   background-repeat: no-repeat;
   scroll-behavior: smooth;
@@ -45,9 +46,4 @@
 
 .countdown-container {
   position: relative;
-}
-
-.just {
-  position: absolute;
-  top: 100%;
 }

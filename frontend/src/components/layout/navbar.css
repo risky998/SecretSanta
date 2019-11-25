@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 
 .link {
   text-transform: uppercase;
@@ -8,6 +8,7 @@
   font-weight: bold;
   padding-bottom: 1%;
   border: none;
+  font-family: "Roboto Condensed";
 }
 
 a.link:hover {

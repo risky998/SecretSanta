@@ -1,214 +1,149 @@
-@import url('https://fonts.googleapis.com/css?family=BenchNine&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap');
-
-.countdownBox {
-  /* width: 90px;
-    height: 90px; */
-  display: flex;
-  flex-direction: column;
-  vertical-align: middle;
-  width: 100%;
-  position: absolute;
-  top: 0%;
-  margin: 25.5% auto 10% auto;
-  font-family: 'Roboto Condensed';
-}
-
-.countdownRow {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-}
-
-.countdownRow1 {
-  display: flex;
-  flex-direction: row;
-  text-align: center;
-  vertical-align: middle;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
-}
-
-.countdownRow h3 {
-  text-align: center;
-  width: 30%;
-  font-size: 150px;
-  color: black;
-  line-height: 85%;
-}
-
-.col1 h3 {
-  text-align: center;
-  font-size: 35px;
-  font-weight: bold;
-  color: #314667;
-  margin-right: 45%;
-}
-
-.col2 h3 {
-  text-align: center;
-  font-size: 35px;
-  font-weight: bold;
-  color: #314667;
-  margin-right: 27%;
-}
-
-.col1 {
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-  margin-left: 3%;
-}
-
-.col2 {
-  display: flex;
-  flex-direction: row;
-  width: 50%;
-  margin-left: 10%;
-}
-
-.title {
-  font-size: 200%;
-}
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
 
 .parent-container {
-  /* font-family: 'Mountains of Christmas', cursive; */
+  font-family: "Roboto Condensed";
   height: 250px;
-  font-family: 'Amatic SC', cursive;
   background-image: linear-gradient(to bottom, #cdf3ff, rgba(255, 255, 255));
   background-repeat: no-repeat;
   scroll-behavior: smooth;
 }
 
-.matchtext {
-  margin-top: 20px;
+.container {
   position: relative;
-  width: 100%;
-  text-align: center;
-  color: #314667;
-  font-size: 35px;
-  font-weight: bold;
-  font-family: 'Roboto Condensed';
-}
-
-.How_works {
-  color: #b31b1b;
-  font-family: 'Roboto Condensed';
-  font-size: 300%;
-  margin-bottom: 10%;
-}
-
-.textrow1 {
   display: flex;
-  flex-direction: row;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.textrow2 {
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 2%;
-}
-
-.imgcol {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-}
-
-.logo {
-  width: 50%;
-  margin: 0 auto 0 auto;
-}
-
-.gift {
-  margin: 0 auto 0 auto;
-  width: 60%;
-  margin-right: 20%;
-}
-
-.textcol {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding-right: 10%;
-  margin: auto 0 auto 0;
-}
-
-.textcol2 {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  padding-left: 13%;
-}
-
-.biggertext {
-  font-family: 'BenchNine';
-  color: #b31b1b;
-  font-size: 200px;
-  text-align: center;
-}
-
-.smallertext {
-  font-family: 'BenchNine';
-  color: #b31b1b;
-  font-size: 130px;
-  text-align: center;
-}
-
-.normaltext {
-  font-family: 'Roboto Condensed';
-  text-align: left;
-  line-height: 40px;
-  text-justify: inter-word;
-  color: #314667;
-}
-
-.normaltext1 {
-  font-family: 'Roboto Condensed';
-  text-align: left;
-  line-height: 40px;
-  text-justify: inter-word;
-  font-size: 20px;
-  color: #314667;
-}
-
-.paragraph {
-  font-family: 'Roboto-condensed';
-  margin-top: auto;
-  margin-bottom: auto;
-  margin-right: 15%;
-  margin-left: 10%;
-  line-height: 30px;
-  text-justify: inter-word;
-}
-
-.list {
-  list-style-position: inside;
-  font-family: 'Roboto Condensed';
-  font-size: 20px;
-  color: #314667;
-}
-
-.list li {
-  margin-bottom: 5%;
+  /* background: blue; */
+  /* width: 100%; */
 }
 
 .background {
   margin-top: 3%;
 }
 
-.arrow {
+.countdownBox {
   position: absolute;
-  top: 100%;
-  margin-top: 1.5%;
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  width: 100%;
+  top: 25%;
+  margin: 12.5% auto 5% auto;
+}
+
+.countdownRow {
+  display: flex;
   justify-content: center;
+  padding-inline-start: 10%;
+  padding-inline-end: 10%;
+}
+
+.countdownCol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.countdownColon h3 {
+  font-size: 10vw;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+}
+
+@media screen and (max-width: 480px) {
+  .countdownColon h3 {
+    font-size: 10vw;
+  }
+
+  .time-text {
+    font-size: 10vw;
+  }
+
+  /* .day-text {
+    font-size: 1em;
+  } */
+}
+
+.time-text {
+  text-align: center;
+  font-size: 10vw;
+  color: black;
+  line-height: 85%;
+  font-family: "Roboto Condensed";
+}
+
+.day-text {
+  text-align: center;
+  font-size: 4vw;
+  font-weight: bold;
+  color: #314667;
+  font-family: "Roboto Condensed";
+}
+
+.col-md-6 {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.matchtext {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #314667;
+  font-size: 35px;
+  font-weight: bold;
+  font-family: "Roboto Condensed";
+}
+
+.normaltext {
+  font-family: "Roboto Condensed";
+  text-align: left;
+  line-height: 40px;
+  text-justify: inter-word;
+  color: #314667;
+}
+.normaltext1 {
+  font-family: "Roboto Condensed";
+  text-align: left;
+  line-height: 20px;
+  text-justify: inter-word;
+  color: #314667;
+}
+
+.How_works {
+  color: #b31b1b;
+  font-family: "Roboto Condensed";
+  font-size: 300%;
+  margin-bottom: 10%;
+}
+
+.textrow1 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 100%;
+}
+
+.logo {
+  width: 110%;
+  margin: 0 auto 0 auto;
+}
+
+.gift {
+  margin: 0 auto 0 auto;
+  width: 100%;
+  margin-right: 20%;
+}
+
+.list {
+  list-style-position: inside;
+  font-family: "Roboto Condensed";
+  font-size: 20px;
+  color: #314667;
+  text-align: left;
+}
+
+.list li {
+  margin-bottom: 5%;
 }
 
 .signuprow {
@@ -216,24 +151,13 @@
   margin-bottom: 10%;
 }
 
-/* .signup {
-  font-size: 50px;
-  font-weight: bold;
-  padding-bottom: 1%;
-  border-bottom: solid;
-  border-bottom-color: #b31b1b;
-  font-family: "Roboto Condensed";
-  text-decoration: none !important;
-  color: #314667;
-} */
-
 .signuprow > a {
   font-size: 50px;
   font-weight: bold;
   padding-bottom: 1%;
   border-bottom: solid;
   border-bottom-color: #b31b1b;
-  font-family: 'Roboto Condensed';
+  font-family: "Roboto Condensed";
   text-decoration: none !important;
   color: #314667;
 }

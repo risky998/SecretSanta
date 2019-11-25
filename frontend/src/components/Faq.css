@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+
 // Mixins
 @mixin transition($property) {
   transition: $property 0.5s ease;
@@ -5,8 +7,8 @@
 
 /*Typography*/
 
-.parent-container{
-    background-image: linear-gradient(to bottom, #cdf3ff, rgba(255, 255, 255));
+.parent-container {
+  background-image: linear-gradient(to bottom, #cdf3ff, rgba(255, 255, 255));
 }
 
 h1 {
@@ -22,9 +24,11 @@ p {
   font-size: 1.3em;
   padding-bottom: 8%;
 }
-h1,h2,p {
+h1,
+h2,
+p {
   line-height: 1.375em;
-  font-family:'Roboto-condensed';
+  font-family: "Roboto Condensed";
 }
 
 /*Base*/
@@ -35,13 +39,14 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-family: "Roboto Condensed";
 }
 
 /*Navigation*/
 .faq-container {
   /* font-family: 'Mountains of Christmas', cursive; */
   height: 70%;
-  font-family: "Roboto-condensed";
+  font-family: "Roboto Condensed";
   background-image: linear-gradient(to bottom, #056886, rgba(0, 0, 255, 0));
   background-repeat: no-repeat;
 }
@@ -54,7 +59,6 @@ section {
   width: 95%;
   min-height: 100%;
   opacity: 0;
-  overflow: none;
   transition: width 0.5s, opacity 0.5s;
 }
 .content {
@@ -70,47 +74,47 @@ section {
   float: left;
   position: relative;
   opacity: 1;
+  font-family: "Roboto Condensed";
 }
 .sec-faq b {
   color: #dc143c;
-  font-family: "Roboto-condensed";
+  font-family: "Roboto Condensed";
 }
 
-.shiftcenter{
-    text-align: center;
+.shiftcenter {
+  text-align: center;
 }
 
 .colortext {
-  color: red
+  font-weight: bold;
 }
 
 .emails {
-    font-size: 100%;
-    display: inline-block;
-    flex-direction: row;
-    width: 200px;
-    margin-right: 50px;
-    color: black;
+  font-size: 100%;
+  display: inline-block;
+  flex-direction: row;
+  width: 200px;
+  color: black;
 }
 
-.row{
-    display: flex;
-    flex-direction: row;
-    text-align: left;
-    width: 100%;
-    justify-content: space-between;
+.row {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  width: 100%;
+  justify-content: space-between;
 }
 
-.imageblock{
-    display: flex;
-    align-content: right;
-    padding-right: 20%;
-
+.imageblock {
+  display: flex;
+  flex-direction: row;
+  background: blue;
 }
 
 .image {
-    width: 50%;
-    align-content: right;
-    padding-left: 30%;
+  width: 50%;
+  padding-left: 30%;
+}
 
+@media screen and (max-width: 480px) {
 }

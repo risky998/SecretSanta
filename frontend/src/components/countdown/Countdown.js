@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import './countdown.css';
-import background from '../../media/background.png';
-import logo from '../../media/logo.png';
-import gift from '../../media/gifts.png';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import "./countdown.css";
+import background from "../../media/background.png";
+import logo from "../../media/logo.png";
+import gift from "../../media/gifts.png";
 
 export default class Countdown extends Component {
   constructor(props) {
@@ -41,10 +41,10 @@ export default class Countdown extends Component {
     minutes %= 60;
     hours %= 24;
 
-    days = days < 10 ? '0' + days : days;
-    hours = hours < 10 ? '0' + hours : hours;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
+    days = days < 10 ? "0" + days : days;
+    hours = hours < 10 ? "0" + hours : hours;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    seconds = seconds < 10 ? "0" + seconds : seconds;
 
     this.setState({ days, hours, minutes, seconds });
   }
@@ -52,41 +52,48 @@ export default class Countdown extends Component {
   render() {
     return (
       <div className="parent-container">
-        <div>
+        <div className="container">
           <img className="background" src={background} />
           <div className="countdownBox">
             <div className="countdownRow">
-              <h3> {this.state.days} </h3>
-              <h3> : </h3>
-              <h3> {this.state.hours} </h3>
-              <h3> : </h3>
-              <h3> {this.state.minutes} </h3>
-              <h3> : </h3>
-              <h3> {this.state.seconds} </h3>
-            </div>
-            <div className="countdownRow1">
-              <div className="col1">
-                <h3> DAYS </h3>
-                <h3> HOURS </h3>
+              <div className="countdownCol">
+                <h3 className="time-text">{this.state.days}</h3>
+                <h3 className="day-text">DAYS</h3>
               </div>
-              <div className="col2">
-                <h3> MINUTES </h3>
-                <h3> SECONDS </h3>
+              <div className="countdownColon">
+                <h3>:</h3>
+              </div>
+              <div className="countdownCol">
+                <h3 className="time-text">{this.state.hours}</h3>
+                <h3 className="day-text">HOURS</h3>
+              </div>
+              <div className="countdownColon">
+                <h3>:</h3>
+              </div>
+              <div className="countdownCol">
+                <h3 className="time-text">{this.state.minutes}</h3>
+                <h3 className="day-text">MINUTES</h3>
+              </div>
+              <div className="countdownColon">
+                <h3>:</h3>
+              </div>
+              <div className="countdownCol">
+                <h3 className="time-text">{this.state.seconds}</h3>
+                <h3 className="day-text">SECONDS</h3>
               </div>
             </div>
-            <br></br>
-          </div>
 
-          <h3 className="matchtext">Till matches are released...</h3>
+            <h3 className="matchtext">Till matches are released...</h3>
+          </div>
         </div>
-        <br></br>
-        <br></br>
+
         <div className="textrow1">
-          <div className="imgcol">
+          <div className="col-md-6">
             <img className="logo" src={logo}></img>
           </div>
-          <div className="textcol">
+          <div className="text-center col-md-6">
             <p className="normaltext">
+              <br></br>
               Welcome to Cornell Secret Santa! This Christmas, we want everyone
               at Cornell to enjoy the festive season by participating in a
               campus-wide Secret Santa gift exchange!
@@ -94,12 +101,8 @@ export default class Countdown extends Component {
           </div>
         </div>
 
-        <div className="textrow2">
-          <div className="textcol2">
-            {/* <h4 className = "paragraph">
-              <b>How</b> does this work?
-            </h4 >
-            <br></br> */}
+        <div className="textrow1">
+          <div className="text-left col-md-6">
             <h2 className="How_works"> How this works</h2>
             <ol className="list">
               <li>
@@ -118,20 +121,23 @@ export default class Countdown extends Component {
               <li>
                 Show up to our
                 <a href="https://www.facebook.com/events/486709211935483/">
-                 <u> Gift Day on <strong>Dec. 10 at Ho Plaza</strong> </u>
+                  <u>
+                    {" "}
+                    Gift Day on <strong>Dec. 10 at Ho Plaza</strong>{" "}
+                  </u>
                 </a>
-                with your gift and find your gift receiver and Secret Santa!{' '}
+                with your gift and find your gift receiver and Secret Santa!{" "}
               </li>
             </ol>
             <p className="normaltext1"> May your wish come true! </p>
             <p className="normaltext1">— ❤ Cornell Secret Santa Team </p>
           </div>
-          <div className="imgcol">
+          <div className="text-center col-md-6">
             <img className="gift" src={gift}></img>
           </div>
         </div>
         <div className="signuprow">
-          <Link to={'/signup'} onClick={this.componentDidMount1}>
+          <Link to={"/signup"} onClick={this.componentDidMount1}>
             Sign Up Here
           </Link>
         </div>
