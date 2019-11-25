@@ -3,6 +3,7 @@
 .container {
   display: flex;
   font-family: "Roboto Condensed";
+  padding-left: 0;
 }
 
 .input-other {
