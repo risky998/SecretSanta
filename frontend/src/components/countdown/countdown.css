@@ -20,7 +20,6 @@
 .background {
   margin-top: 3%;
   width: 100%;
-  height: inherit !important;
   position: relative;
 }
 
@@ -170,6 +169,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .background {
+    height: 170px;
+  }
+
   .countdownColon h3 {
     font-size: 10vw;
   }
