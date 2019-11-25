@@ -14,6 +14,8 @@
 .countdownRow {
   display: flex;
   justify-content: center;
+  padding-inline-start: 10%;
+  padding-inline-end: 10%;
 }
 
 .countdownCol {
@@ -25,16 +27,16 @@
 .countdownColon h3 {
   font-size: 10vw;
   font-weight: bold;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto-condensed';
 }
 
 @media screen and (max-width: 480px) {
   .countdownColon h3 {
-    font-size: 12vw;
+    font-size: 10vw;
   }
 
   .time-text {
-    font-size: 20vw;
+    font-size: 10vw;
   }
 
   /* .day-text {
@@ -44,10 +46,10 @@
 
 .time-text {
   text-align: center;
-  font-size: 16vw;
+  font-size: 10vw;
   color: black;
   line-height: 85%;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto-condensed';
 }
 
 .day-text {
@@ -55,7 +57,7 @@
   font-size: 4vw;
   font-weight: bold;
   color: #314667;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto-condensed';
 }
 
 .parent-container {
@@ -63,6 +65,12 @@
   background-image: linear-gradient(to bottom, #cdf3ff, rgba(255, 255, 255));
   background-repeat: no-repeat;
   scroll-behavior: smooth;
+}
+
+.col-md-6 {
+  padding-left: 10%;
+  padding-right: 10%;
+
 }
 
 .matchtext {
@@ -73,20 +81,27 @@
   color: #314667;
   font-size: 35px;
   font-weight: bold;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto-condensed';
 }
 
 .normaltext {
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto-condensed';
   text-align: left;
   line-height: 40px;
+  text-justify: inter-word;
+  color: #314667;
+}
+.normaltext1 {
+  font-family: 'Roboto-condensed';
+  text-align: left;
+  line-height: 20px;
   text-justify: inter-word;
   color: #314667;
 }
 
 .How_works {
   color: #b31b1b;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto-condensed';
   font-size: 300%;
   margin-bottom: 10%;
 }
@@ -101,23 +116,22 @@
 }
 
 .logo {
-  width: 50%;
+  width: 110%;
   margin: 0 auto 0 auto;
 }
 
 .gift {
   margin: 0 auto 0 auto;
-  width: 60%;
+  width: 100%;
   margin-right: 20%;
 }
 
 .list {
   list-style-position: inside;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto-condensed';
   font-size: 20px;
   color: #314667;
   text-align: left;
-  padding-left: 10%;
 }
 
 .list li {
@@ -146,7 +160,7 @@
   padding-bottom: 1%;
   border-bottom: solid;
   border-bottom-color: #b31b1b;
-  font-family: 'Roboto Condensed';
+  font-family: 'Roboto-condensed';
   text-decoration: none !important;
   color: #314667;
 }
