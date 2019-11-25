@@ -1,22 +1,24 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
-
+/* 
 .parent-container {
   font-family: "Roboto Condensed";
   height: 250px;
   background-image: linear-gradient(to bottom, #cdf3ff, rgba(255, 255, 255));
   background-repeat: no-repeat;
   scroll-behavior: smooth;
-}
+} */
 
-.container {
+.home-container {
   position: relative;
   display: flex;
-  /* background: blue; */
-  /* width: 100%; */
+  flex-grow: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .background {
   margin-top: 3%;
+  width: 100%;
 }
 
 .countdownBox {

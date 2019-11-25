@@ -52,7 +52,7 @@ export default class Countdown extends Component {
   render() {
     return (
       <div className="parent-container">
-        <div className="container">
+        <div className="home-container">
           <img className="background" src={background} />
           <div className="countdownBox">
             <div className="countdownRow">
