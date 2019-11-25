@@ -20,7 +20,7 @@
 .background {
   margin-top: 3%;
   width: 100%;
-  height: fixed;
+  height: inherit !important;
   position: relative;
 }
 
