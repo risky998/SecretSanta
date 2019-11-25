@@ -9,6 +9,7 @@ export default class FAQ extends Component {
       <div className="parent-container">
         <section className="sec-faq">
           <div className="content">
+            <div className = "col-md-12">
             <h1>
               <b>Frequently Asked Questions </b>
             </h1>
@@ -65,21 +66,21 @@ export default class FAQ extends Component {
             <div className="shiftcenter">
               <div className="row">
                 <div className="emails">
-                  <p> yw456@cornell.edu sp798@cornell.edu rs868@cornell.edu </p>
+                  <div className = "col-md-6">
+                  <p> yw456@cornell.edu sp798@cornell.edu rs868@cornell.edu hyw2@cornell.edu kc677@cornell.edu yy447@cornell.edu
+                    sl2982@cornell.edu </p>
+                  </div>
                 </div>
-                <div className="emails">
-                  <p>
-                    {" "}
-                    hyw2@cornell.edu kc677@cornell.edu yy447@cornell.edu
-                    sl2982@cornell.edu{" "}
-                  </p>
-                </div>
+               <div className = "col-md-3">
                 <img
                   className="imageblock"
                   src={question}
                   alt="Question photo"
                 />
               </div>
+              </div>
+              </div>
+
             </div>
           </div>
         </section>

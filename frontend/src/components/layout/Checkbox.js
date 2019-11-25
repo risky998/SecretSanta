@@ -36,9 +36,12 @@ export const CheckboxesGroup = props => {
   return (
     <div className="container">
       <FormControl required error={error} component="fieldset">
-        <FormLabel component="legend">
-          What are your area(s) of interest?
-        </FormLabel>
+      <FormLabel
+          component="legend"
+          style={{ fontFamily: "Roboto Condensed", marginBottom: 20 }}
+        >
+          What are your areas of interest?
+          </FormLabel>
         <FormGroup>
           <FormControlLabel
             control={
@@ -118,7 +121,7 @@ export const CheckboxesGroup = props => {
             }
             label="Stationery"
           />
-          <div className="container">
+          {/* <div className="container"> */}
             <FormControlLabel
               control={
                 <Checkbox
@@ -133,7 +136,7 @@ export const CheckboxesGroup = props => {
               disabled={!Other}
               onChange={e => props.onOtherInputChange(e)}
             />
-          </div>
+          {/* </div> */}
         </FormGroup>
         <FormHelperText stlye={{ marginTop: 15 }}>
           Pick at least one!
