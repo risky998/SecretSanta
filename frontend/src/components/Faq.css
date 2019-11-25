@@ -116,5 +116,20 @@ section {
   padding-left: 30%;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 600px) {
+  .emails {
+    width: 100%;
+  }
+
+  .colortext {
+    text-align: center;
+  }
+
+  .row {
+    width: 100%;
+  }
+
+  .imageblock {
+    width: 95%;
+  }
 }
