@@ -106,7 +106,7 @@ export default class Countdown extends Component {
             <h2 className="How_works"> How this works</h2>
             <ol className="list">
               <li>
-                Sign up on <strong>Nov. 22</strong> to participate in the Secret
+                Sign up by <strong>Dec. 5</strong> to participate in the Secret
                 Santa draw.
               </li>
               <li>
