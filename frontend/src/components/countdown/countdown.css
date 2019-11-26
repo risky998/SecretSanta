@@ -19,7 +19,8 @@
 
 .background {
   margin-top: 3%;
-  width: 100%;
+  width: 100% !important;
+  height: 100% !important;
   position: relative;
 }
 
