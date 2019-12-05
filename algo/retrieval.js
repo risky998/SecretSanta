@@ -24,10 +24,24 @@ db.collection('users')
     querySnapshot.forEach(function(doc) {
         // console.log(doc.id)
         data.push({email:doc.data().Email, categories:doc.data().Categories, price:doc.data().Price_Range})
+        // data.push({first_name:doc.data().First_Name,last_name:doc.data().Last_Name, email:doc.data().Email})
     })
     console.log(data)
+    console.log(data.length)
     const fs = require('fs')
     fs.writeFile('Data.json', JSON.stringify(data), (err) => {
         if (err) throw err;
     })
+    // const createCsvWriter = require('csv-writer').createObjectCsvWriter;
+    // const csvWriter = createCsvWriter({
+    // path: 'emails.csv',
+    // header: [
+    //     {id: 'first_name', title: 'First_name'},
+    //     {id: 'last_name', title: 'Last_name'},
+    //     {id: 'email', title: 'Email'},
+    // ]
+    // });
+    // csvWriter
+    // .writeRecords(data)
+    // .then(()=> console.log('The CSV file was written successfully'));
 })

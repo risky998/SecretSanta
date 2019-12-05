@@ -53,5 +53,11 @@ def main(interests):
     print(simMtrx)
 
 
-main([["reading", "board games", "food"], ["class supplies", "Food", "Books"], ["book", "video games", "coffee"], [
-     "music", "piano", "software"], ["Reading", "Music", "Dancing"], ["Sports", "Fasion", "food"], ["Parties", "Movies", "Art", ]])
+# main([["reading", "board games", "food"], ["class supplies", "Food", "Books"], ["book", "video games", "coffee"], [
+#      "music", "piano", "software"], ["Reading", "Music", "Dancing"], ["Sports", "Fasion", "food"], ["Parties", "Movies", "Art", ]])
+import json
+with open("data.json", "r") as read_file:
+    data = json.load(read_file)
+for item in data:
+    for i in item['categories']:
+        print(i)
