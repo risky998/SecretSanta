@@ -26,7 +26,7 @@ export default class Countdown extends Component {
 
   countdown() {
     const current = new Date();
-    const eventDate = new Date(1575665000 * 1000);
+    const eventDate = new Date(1576173600 * 1000);
 
     const current_time = current.getTime();
     const event_time = eventDate.getTime();
@@ -83,10 +83,21 @@ export default class Countdown extends Component {
               </div>
             </div>
 
-            <h3 className="matchtext">Till matches are released...</h3>
+            <h3 className="matchtext">Till gift day...</h3>
           </div>
         </div>
 
+        <div className="textrow1">
+          <div className = "text-center col-md-10 offset-1">
+          <div className="text-center">
+            <p className="normaltext">
+              <br></br>
+              Matches have now been released! Please check your email (spam/junk included) to find your match. 
+              If you think you signed up but did not receive any email, please reach out yy447@cornell.edu or rs868@cornell.edu
+            </p>
+          </div>
+          </div>
+        </div>
         <div className="textrow1">
           <div className="col-md-6">
             <img className="logo" src={logo}></img>
