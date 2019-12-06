@@ -26,7 +26,7 @@ export default class Countdown extends Component {
 
   countdown() {
     const current = new Date();
-    const eventDate = new Date(1575660800 * 1000);
+    const eventDate = new Date(1575665000 * 1000);
 
     const current_time = current.getTime();
     const event_time = eventDate.getTime();
