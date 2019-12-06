@@ -28,6 +28,10 @@ Then, send error feedback to Signup for error message to be displayed.
 If no errors, send to firebase
 */
 export function signupValidation(form) {
+    //Signups are now closed
+    alert('Signups are now closed. Thank you for your interest and we hope you can join us next year!')
+    return
+    //Signups are now closed
     if (form.firstName == ""){
         alert('Please enter your first name!')
     } else if (form.lastName == ""){

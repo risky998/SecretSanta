@@ -26,7 +26,7 @@ export default class Countdown extends Component {
 
   countdown() {
     const current = new Date();
-    const eventDate = new Date(1575640800 * 1000);
+    const eventDate = new Date(1575660800 * 1000);
 
     const current_time = current.getTime();
     const event_time = eventDate.getTime();
@@ -123,7 +123,7 @@ export default class Countdown extends Component {
                 <a href="https://www.facebook.com/events/486709211935483/">
                   <u>
                     {" "}
-                    Gift Day on <strong>Dec. 10 at Ho Plaza</strong>{" "}
+                    Gift Day on <strong>Dec. 12 at Ho Plaza</strong>{" "}
                   </u>
                 </a>
                 with your gift and find your gift receiver and Secret Santa!{" "}
