@@ -26,7 +26,7 @@ export default class Countdown extends Component {
 
   countdown() {
     const current = new Date();
-    const eventDate = new Date(1576173600 * 1000);
+    const eventDate = new Date(1607515200 * 1000);
 
     const current_time = current.getTime();
     const event_time = eventDate.getTime();
@@ -83,7 +83,7 @@ export default class Countdown extends Component {
               </div>
             </div>
 
-            <h3 className="matchtext">Till gift day...</h3>
+            <h3 className="matchtext">Till next year's event...</h3>
           </div>
         </div>
 
@@ -92,8 +92,8 @@ export default class Countdown extends Component {
           <div className="text-center">
             <p className="normaltext">
               <br></br>
-              Matches have now been released! Please check your email (spam/junk included) to find your match. 
-              If you think you signed up but did not receive any email, please reach out yy447@cornell.edu or rs868@cornell.edu
+              A big thank you to everyone who participated this year! We hope you had a great time and made new friends. See you next year :)
+              If you have any questions about the event, please reach out yy447@cornell.edu or rs868@cornell.edu
             </p>
           </div>
           </div>
