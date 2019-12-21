@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./countdown.css";
-import background from "../../media/background.png";
+import background from "../../media/background-crop.png";
 import logo from "../../media/logo.png";
 import gift from "../../media/gifts.png";
 
