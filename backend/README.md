@@ -1,2 +1,2 @@
 # SecretSanta
-Secret Santa Project. 
+Backend Folder Deprecated. 
