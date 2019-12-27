@@ -1,2 +1,3 @@
 # SecretSanta
-Backend Folder Deprecated. 
+
+No longer in use. Backend Folder Deprecated. 
