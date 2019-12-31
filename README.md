@@ -31,3 +31,6 @@ The algorithm was developed in Python and is a three part algorithm:
 3. The third part of our algorithm is a graphing algorithm that actually matches people according to their similarities. 
 
 
+__Backend Folder__
+
+The backend folder no longer contains useful code and is soon to be removed. 
