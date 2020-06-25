@@ -83,19 +83,19 @@ export default class Countdown extends Component {
               </div>
             </div>
 
-            <h3 className="matchtext">Till next year's event...</h3>
+            <h3 className="matchtext">Till this year's event...</h3>
           </div>
         </div>
 
         <div className="textrow1">
-          <div className = "text-center col-md-10 offset-1">
-          <div className="text-center">
-            <p className="normaltext">
-              <br></br>
-              A big thank you to everyone who participated this year! We hope you had a great time and made new friends. See you next year :)
-              If you have any questions about the event, please reach out yy447@cornell.edu or rs868@cornell.edu
+          <div className="text-center col-md-10 offset-1">
+            <div className="text-center">
+              <p className="normaltext">
+                <br></br>
+              A big thank you to everyone who participated last year! We hope you had a great time and made new friends. See you (hopefully) later this year :)
+              If you have any questions about the event, please reach out yy447@cornell.edu or rs868@cornell.edu.
             </p>
-          </div>
+            </div>
           </div>
         </div>
         <div className="textrow1">
